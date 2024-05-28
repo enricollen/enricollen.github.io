@@ -41,4 +41,4 @@ Visit the project repository [here](https://github.com/enricollen/bike-rental-de
 
 ## Screenshots 📸
 Here is a screenshot illustrating the prediction accuracy of the MLP model covering 2 weeks approximately:
-![Screenshot 1](assets\img\posts\bike_rental_prediction\predictions.jpg)
+![Screenshot 1](assets/img/posts/bike_rental_prediction/predictions.jpg)
