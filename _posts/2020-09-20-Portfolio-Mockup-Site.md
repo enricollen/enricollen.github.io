@@ -16,7 +16,7 @@ Key features include:
 
 ## Live Demo 🌍
 You can view a live demo of the portfolio site mockup at the following link:
-[Portfolio Demo](http://enricollen.altervista.org/index.php) 
+[Portfolio Demo](https://enricollen.altervista.org/index.php) 
 
 ## Setup and Installation ⚙️
 To get this portfolio site running on your own server, follow the steps described at my GitHub repo [Here](https://github.com/enricollen/Portfolio-image-gallery-HTML-CSS-JS-PHP-MySQL). 
