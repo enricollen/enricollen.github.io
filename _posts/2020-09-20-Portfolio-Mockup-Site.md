@@ -2,7 +2,7 @@
 title: Portfolio Mockup Site
 date: 2020-10-25 21:30 +0200
 categories: [Personal Projects, Portoflio Mockup Site]
-tags: [portfolio, photography, php, html, css, mysql]
+tags: [portfolio, photography, php, html, css, js, mysql]
 ---
 
 # Image Portfolio Site Mockup 🖼️
@@ -23,7 +23,7 @@ To get this portfolio site running on your own server, follow the steps describe
 (if you enjoyed this content please consider leaving a star ⭐)
 
 ## Screenshots 📸
-Here are some screenshots illustrating the features and user interface of the portfolio site:
+Here are some screenshots illustrating the portfolio site:
 ![Screenshot 1](https://camo.githubusercontent.com/7ffb958d680dc2801cdcbb15cf5b49cd36a2bb0960a926741cda27fdd9c0dd96/68747470733a2f2f692e6962622e636f2f66384d56436d4c2f696e6465782d706f7274666f6c696f2e706e67)  
 ![Screenshot 2](https://camo.githubusercontent.com/ab4cb9f5da10664b604fbaeefec3bf31b5cdb1992fc22de2f088f0afd074d4fe/68747470733a2f2f692e6962622e636f2f466e33795963332f67616c6c6572792e706e67)
 ![Screenshot 3](https://camo.githubusercontent.com/b128db4bf0c143e035cdb94f017145ce3e3b06270d54093133105bc1c4cd61a2/68747470733a2f2f692e6962622e636f2f6d7979677a39762f636f6e746163742e706e67)

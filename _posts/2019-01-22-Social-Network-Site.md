@@ -2,7 +2,7 @@
 title: Social Network Site
 date: 2019-01-22 21:30 +0200
 categories: [Bachelor Degree Projects, Social Network Site]
-tags: [java, javafx, mysql]
+tags: [php, html, css, js, mysql]
 ---
 
 # Pausa Caffè - Social Network ☕️
@@ -45,7 +45,7 @@ Note: It's not possible to register new users for the moment, so you can try log
 (note: site doesn't fit on mobile, check it on laptop/desktop!) 
 
 ## Screenshots 📸
-Here are some screenshots illustrating the features and user interface of the portfolio site:
+Here are some screenshots illustrating the social network site:
 ![Screenshot 1](https://camo.githubusercontent.com/ce0e6a51964cc10d826bfb9c225173c5c2354b50cfcd5c023dd28e5441780170/68747470733a2f2f692e6962622e636f2f567659717157352f7061757361312e706e67)  
 ![Screenshot 2](https://camo.githubusercontent.com/331ff2351d93cfddcdbfedf439047d28cd9eab068ad94f10c6003ba1bd54cf59/68747470733a2f2f692e6962622e636f2f666b44713439662f7061757361322e706e67)
 ![Screenshot 3](https://camo.githubusercontent.com/150f77b9f5052ee9040940f446c4cfb3534d3d6fe7bedfc25ac004093619fcac/68747470733a2f2f692e6962622e636f2f39774a523877532f7061757361332e706e67)
