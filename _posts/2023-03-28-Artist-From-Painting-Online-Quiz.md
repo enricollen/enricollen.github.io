@@ -30,6 +30,6 @@ Here is a screenshot illustrating the web game interface:
 ![Screenshot 2](https://user-images.githubusercontent.com/55366018/219872603-5b0c1fff-5f18-44a2-85be-9ee99e8fba95.png)
 
 ## 🔗 GitHub Repository
-Visit the project repository [here](https://github.com/TommyTheHuman/CIDL-ArtistClassification) for accessing the CNN model and to the codebase.
+Visit the project repository [here](https://github.com/enricollen/Artists-from-Paintings-Quiz) for accessing the CNN model and to the codebase.
 
 Happy guessing!
