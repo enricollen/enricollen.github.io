@@ -2,7 +2,7 @@
 title: C-Multiclient Lottery Game
 date: 2020-07-07 21:30 +0200
 categories: [Bachelor Degree Projects, C-Multiclient Lottery Game]
-tags: [C, game]
+tags: [C, game, networks]
 ---
 
 # C-Multiclient Online Lottery Game 🎲

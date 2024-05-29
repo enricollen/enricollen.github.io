@@ -24,12 +24,12 @@ The AI model you're playing against is a VGG16 pre-trained ConvNet with a test a
 ## Technology Stack
 The game is implemented using Python and Flask.
 
-## Screenshots 📸
-Here is a screenshot illustrating the web game interface:
-![Screenshot 1](https://user-images.githubusercontent.com/55366018/219872599-1597362a-611f-4ac4-94aa-77690d8e9eb3.png)
-![Screenshot 2](https://user-images.githubusercontent.com/55366018/219872603-5b0c1fff-5f18-44a2-85be-9ee99e8fba95.png)
-
 ## 🔗 GitHub Repository
 Visit the project repository [here](https://github.com/enricollen/Artists-from-Paintings-Quiz) for accessing the CNN model and to the codebase.
 
 Happy guessing!
+
+## Screenshots 📸
+Here is a screenshot illustrating the web game interface:
+![Screenshot 1](https://user-images.githubusercontent.com/55366018/219872599-1597362a-611f-4ac4-94aa-77690d8e9eb3.png)
+![Screenshot 2](https://user-images.githubusercontent.com/55366018/219872603-5b0c1fff-5f18-44a2-85be-9ee99e8fba95.png)
