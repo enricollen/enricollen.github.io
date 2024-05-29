@@ -27,6 +27,12 @@ The game is implemented using Python and Flask.
 ## 🔗 GitHub Repository
 Visit the project repository [here](https://github.com/enricollen/Artists-from-Paintings-Quiz) for accessing the CNN model and to the codebase.
 
+## 🛠️ Setup and Local Deployment
+- Clone the repository and navigate to the project directory.
+- Install dependencies: `pip install -r requirements.txt`
+- Run the application: `python artists_quiz.py`
+- Navigate to `http://localhost:5000/`
+
 Happy guessing!
 
 ## Screenshots 📸
