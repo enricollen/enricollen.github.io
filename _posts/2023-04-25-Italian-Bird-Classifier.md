@@ -40,7 +40,7 @@ Upload a bird image to receive the predicted species name.
 - **Form Data Key**: `file` (attach your bird image here)
 
 #### Request Example
-`curl -X POST -F "file=@path_to_your_bird_image.jpg" http://localhost:5000/bird-prediction`
+`curl -X POST -F "file=@path_to_your_bird_image.jpg" http://italianbirds.duckdns.org:5000/bird-prediction`
 
 ### Successful Response Example:
 `{
@@ -53,7 +53,7 @@ Upload a bird image to receive the predicted species name.
 - **Form Data Key**: `file` (attach your bird image here)
 
 #### Request Example:
-`curl -X POST -F "file=@path_to_your_bird_image.jpg" http://localhost:5000/bird-probabilities-prediction`
+`curl -X POST -F "file=@path_to_your_bird_image.jpg" http://italianbirds.duckdns.org:5000/bird-probabilities-prediction`
 
 ### Successful Response Example:
 `{
@@ -74,4 +74,4 @@ Upload a bird image to receive the predicted species name.
 Visit the project repository [here](https://github.com/enricollen/italian-birds-classifier-api-tflite-version) for accessing the codebase.
 
 ## 🤖 Live Demo
-Feel fre to try out the APIs or the live demo hosted on my Raspberry Pi [DEMO](http://italianbirds.duckdns.org:5000/).
+Feel fre to try out the APIs or the live demo hosted on my Raspberry Pi at `http://italianbirds.duckdns.org:5000/`.
