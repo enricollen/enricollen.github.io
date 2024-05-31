@@ -8,7 +8,7 @@ Thesis Title:
 
 *On the Effectiveness of Deepfake Detection on Multimodal Fake News*
 
-For my Master Thesis i worked on the Deepfake Detection topic. Today, the misinformation spreads rapidly, detecting deepfakes and fake news has become crucial. However, there was a lack of research on combining these two areas. 
+My Master Thesis, conducted in collaboration with ISTI-CNR of Pisa, focused on the topic of Deepfake Detection. Today, the misinformation spreads rapidly, detecting deepfakes and fake news has become crucial. However, there was a lack of research on combining these two areas. 
 My thesis aims to bridge this gap by proposing a new type of analysis that combines the detection of deepfakes and fake news.
 
 
