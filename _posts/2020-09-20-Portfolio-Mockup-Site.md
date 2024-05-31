@@ -1,7 +1,7 @@
 ---
-title: Portfolio Mockup Site
+title: Photography Portfolio Mockup Site
 date: 2020-10-25 21:30 +0200
-categories: [Personal Projects, Portoflio Mockup Site]
+categories: [Personal Projects, Photography Portoflio Mockup Site]
 tags: [portfolio, photography, php, html, css, js, mysql]
 ---
 
