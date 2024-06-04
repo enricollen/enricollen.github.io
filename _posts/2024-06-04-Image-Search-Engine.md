@@ -40,6 +40,6 @@ Visit the project repository [here](https://github.com/enricollen/ImageSearchEng
 
 ## Screenshots 📸
 Here is a screenshot illustrating the simple search engine interface:
-<img src="assets/img/posts/image_search_engine/example_1.jpg" width="400" height="400">
-<img src="assets/img/posts/image_search_engine/example_2.jpg"  width="400" height="400">
-<img src="assets/img/posts/image_search_engine/example_3.jpg"  width="400" height="400">
+<img src="assets/img/posts/image_search_engine/example_1.jpg" alt="interface_1"width="400" height="400">
+<img src="assets/img/posts/image_search_engine/example_2.jpg" alt="interface_2"width="400" height="400">
+<img src="assets/img/posts/image_search_engine/example_3.jpg" alt="embeddings"width="400" height="400">
