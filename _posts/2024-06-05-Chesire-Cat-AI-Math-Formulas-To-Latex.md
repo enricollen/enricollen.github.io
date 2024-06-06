@@ -1,6 +1,6 @@
 ---
 title: Math Formulas to Latex [Plugin for Cheshire Cat AI - An Open Source Italian LLM Project]
-date: 2024-06-06 21:30 +0200
+date: 2024-06-05 21:30 +0200
 categories: [Open Source Contributions, Math Formulas to Latex Plugin for Cheshire Cat AI]
 tags: [LLM, Open Source]
 ---
@@ -27,4 +27,6 @@ Visit the project repository [here](https://github.com/enricollen/FormulasFurLat
 ## Screenshots 📸
 Here is a screenshot illustrating the plugin being used within the chat:
 ![Screenshot 1](https://github.com/enricollen/FormulasFurLatex/raw/main/example.png)
+
+Check correctness:
 ![Screenshot 2](https://github.com/enricollen/FormulasFurLatex/raw/main/validate_result_example.png)

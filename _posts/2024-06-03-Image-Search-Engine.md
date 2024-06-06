@@ -1,6 +1,6 @@
 ---
 title: Simple Image Search Engine Using CLIP
-date: 2024-06-04 21:30 +0200
+date: 2024-06-03 21:30 +0200
 categories: [Personal Projects, Simple Image Search Engine Using CLIP]
 tags: [computer vision, search engine]
 ---
