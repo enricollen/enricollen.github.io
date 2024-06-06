@@ -1,5 +1,5 @@
 ---
-title: Image Background Removal Plugin for Cheshire Cat AI - An Open Source Italian LLM Project
+title: Image Background Removal [Plugin for Cheshire Cat AI - An Open Source Italian LLM Project]
 date: 2024-03-24 21:30 +0200
 categories: [Open Source Contributions, Image Background Removal Plugin for Cheshire Cat AI]
 tags: [LLM, Open Source]
