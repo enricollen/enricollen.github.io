@@ -16,7 +16,7 @@ timezone:
 
 title: Enrico Nello # the main title
 
-tagline: Welcome to my blog # it will display as the sub-title
+tagline: ML Enthusiast # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   A minimal, responsive and feature-rich Jekyll theme for technical writing.
