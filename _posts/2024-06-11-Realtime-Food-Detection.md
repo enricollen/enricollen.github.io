@@ -55,7 +55,7 @@ This ensures that users can see the price in real-time as they place more items 
 
 ## 📹 Demo Video
 Watch the demo video below to see the Real-Time Food Detection System in action:
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/4eRQTrln_ag/0.jpg)](https://www.youtube.com/watch?v=4eRQTrln_ag)
+[![YT Video](https://img.youtube.com/vi/4eRQTrln_ag/0.jpg)](https://www.youtube.com/watch?v=4eRQTrln_ag)
 
 ## 🔗 GitHub Repository
 Visit the project repository [here](https://github.com/enricollen/RealTimeFoodDetection) to access the codebase and the model. (if you enjoyed this content please consider leaving a star ⭐)
