@@ -27,7 +27,7 @@ Here is the list of food items that the system can detect along with their corre
 - **Spaghetti**: $10
 - **White Rice**: $5
 
-These food classes are just the ones contained in the '[Food Detection Image Dataset](https://universe.roboflow.com/food-hofna/food-detection-fme3o/dataset/8)', that i used for fine-tuning the YOLO model. 
+These food classes are just the ones contained in the [Food Detection Image Dataset](https://universe.roboflow.com/food-hofna/food-detection-fme3o/dataset/8), that i used for fine-tuning the YOLO model. 
 However, it is fully customizable for personal use if someone wants to create a personal food dataset.
 
 ## 🎥 Webcam Integration
@@ -55,7 +55,6 @@ This ensures that users can see the price in real-time as they place more items 
 
 ## 📹 Demo Video
 Watch the demo video below to see the Real-Time Food Detection System in action:
-[![YT Video](https://img.youtube.com/vi/4eRQTrln_ag/0.jpg)](https://www.youtube.com/watch?v=4eRQTrln_ag)
 
 ## 🔗 GitHub Repository
 Visit the project repository [here](https://github.com/enricollen/RealTimeFoodDetection) to access the codebase and the model. (if you enjoyed this content please consider leaving a star ⭐)
