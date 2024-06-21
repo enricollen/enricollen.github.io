@@ -1,11 +1,9 @@
 ---
-title: Artist Identification from Paintings
+title: 🎨 Artist Identification from Paintings
 date: 2022-02-12 21:30 +0200
 categories: [Master Degree Projects, Artist Identification from Paintings]
 tags: [deep learning, CNN, ensemble, genetic algorithm, classification, computer vision]
 ---
-
-# Artist Identification from Paintings 🎨
 The project aims to create an algorithm that can accurately identify the artist of a painting using Convolutional Neural Networks (CNNs). Techniques include building networks from scratch, utilizing pre-trained networks, and creating a final ensemble network composed of the most effective classifiers.
 
 This project was originally develop for the course 'Computer Intelligence and Deep Learning' in MSc in Artificial Intelligence & Data Engineering at University of Pisa.

@@ -1,11 +1,9 @@
 ---
-title: Social Network Site
+title: ☕️ Social Network Site
 date: 2019-01-22 21:30 +0200
 categories: [Bachelor Degree Projects, Social Network Site]
 tags: [php, html, css, js, mysql]
 ---
-
-# Pausa Caffè - Social Network ☕️
 "Pausa Caffè" is an open-source social network platform written in pure HTML, CSS, JS, PHP with a MySQL database. This project was developed as part of the 'Web Development' exam during my Bachelor's degree. The goal was to demonstrate the basic architecture of a PHP-based web application. Please note that all the code and comments on git are in Italian.
 
 ## Features 🔍

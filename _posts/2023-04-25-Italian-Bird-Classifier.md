@@ -1,5 +1,5 @@
 ---
-title: Italian Birds Classifier
+title: 🐦 Italian Birds Classifier
 date: 2023-04-25 21:30 +0200
 categories: [Personal Projects, Italian Birds Classifier]
 tags: [deep learning, CNN, classification, computer vision]

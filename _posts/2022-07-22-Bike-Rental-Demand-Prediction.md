@@ -1,11 +1,9 @@
 ---
-title: Bike Rental Demand Prediction
+title: 🚲 Bike Rental Demand Prediction
 date: 2022-07-22 21:30 +0200
 categories: [Master Degree Projects, Bike Rental Demand Prediction]
 tags: [machine learning, random forest, MLP, time series]
 ---
-# Bike Rental Demand Predictor
-
 🔍 Retailing and AI-based logistics optimizations.
 
 This project aims to optimize logistics for companies in the outdoor rental field, such as electric scooters and bicycles, by predicting demand using historical rental data. 

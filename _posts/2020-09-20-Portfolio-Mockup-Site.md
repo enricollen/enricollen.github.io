@@ -1,11 +1,9 @@
 ---
-title: Photography Portfolio Mockup Site
+title: 📸🖼️ Photography Portfolio Mockup Site
 date: 2020-10-25 21:30 +0200
 categories: [Personal Projects, Photography Portoflio Mockup Site]
 tags: [portfolio, photography, php, html, css, js, mysql]
 ---
-
-# Image Portfolio Site Mockup 🖼️
 This project i developed back in the days showcase a ready-to-go mockup for an image portfolio site, designed to showcase your personal image/photography content effectively. 
 The site is built using pure HTML, CSS, JavaScript, PHP, and MySQL. 
 

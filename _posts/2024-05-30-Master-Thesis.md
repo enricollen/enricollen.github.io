@@ -1,5 +1,5 @@
 ---
-title: Master Thesis - Combining Deepfake Detection with Fake News Analysis
+title: 🎭 Master Thesis - Combining Deepfake Detection with Fake News Analysis
 date: 2024-05-30 21:30 +0200
 categories: [Master Thesis, On the Effectiveness of Deepfake Detection on Multimodal Fake News]
 tags: [thesis, deepfake, generative AI]

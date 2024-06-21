@@ -1,5 +1,5 @@
 ---
-title: Artist Identification from Paintings - Online Quiz Game Against an AI
+title: 🎨❓ Artist Identification from Paintings - Online Quiz Game Against an AI
 date: 2022-02-12 21:30 +0200
 categories: [Personal Projects, Artist Identification from Paintings - Online Quiz Game Against an AI]
 tags: [deep learning, CNN, classification, computer vision, game]

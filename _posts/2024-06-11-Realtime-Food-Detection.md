@@ -1,10 +1,9 @@
 ---
-title: Real-Time Food Detection System
+title: 🍽️👁️ Real-Time Food Detection System
 date: 2024-06-11 21:30 +0200
 categories: [Personal Projects, Real-Time Food Detection System]
 tags: [object detection, YOLO, computer vision]
 ---
-# 🍽️ Real-Time Food Detection System
 This project was inspired by the innovative Ikea's restaurant payment method, which implements real-time object detection to determine the price to pay.
 
 I tried to recreate a similar system, developed as a simple web application using Flask, where the backbone network is a [YOLOv8](https://docs.ultralytics.com/) model, which i fine-tuned on food images. 

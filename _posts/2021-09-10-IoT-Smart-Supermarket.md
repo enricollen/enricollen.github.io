@@ -1,5 +1,5 @@
 ---
-title: IoT - Smart Supermarket
+title: 🛒 IoT - Smart Supermarket
 date: 2021-09-10 21:30 +0200
 categories: [Master Degree Projects, IoT - Smart Supermarket]
 tags: [IoT, sensors]

@@ -1,10 +1,9 @@
 ---
-title: Java Theatre Seat Booking System
+title: 🎭 Java Theatre Seat Booking System
 date: 2020-09-05 21:30 +0200
 categories: [Bachelor Degree Projects, Java Theatre Seat Booking System]
 tags: [java, javafx, mysql]
 ---
-# In Scena - Theater Booking System 🎭
 "In Scena" is a Java FX-based application designed for managing bookings for theater companies. This project was developed for the "Advanced Programming" course during my bachelor's degree and features a comprehensive system that allows users to book seats.
 
 ## Key Features 🔑
