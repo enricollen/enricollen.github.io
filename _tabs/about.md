@@ -21,6 +21,12 @@ Feel free to check out my [GitHub profile](https://github.com/enricollen) for mo
 **University:** University of Pisa, 2017-2021  
 **Degree mark:** 98/110  
 
+## 📄 CV
+
+You can download my CV in PDF format by clicking the link below:
+
+- <a href="../assets/CV.pdf" download>Download CV</a>
+
 ## 📬 Contact Information
 
 If you need to reach out to me, feel free to email me at:
