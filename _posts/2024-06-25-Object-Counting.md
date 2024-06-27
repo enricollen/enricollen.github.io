@@ -1,6 +1,6 @@
 ---
 title: 🔢👁️ Real-Time Object Detection and Counting
-date: 2024-06-20 21:30 +0200
+date: 2024-06-25 21:30 +0200
 categories: [Personal Projects, Real-Time Object Detection and Counting]
 tags: [YOLO, object detection, computer vision]
 ---
