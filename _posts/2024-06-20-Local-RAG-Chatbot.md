@@ -71,7 +71,8 @@ Visit the project repository [here](https://github.com/enricollen/rag-conversati
 
 ## 🚀 Future Improvements
 Here are some ideas for future improvements:
-- [ ] Add OpenAI LLM GPT model compatibility
+- [x] Add OpenAI LLM GPT models compatibility
+- [x] Add unit testing to validate the responses given by the LLM
 - [ ] Add web scraping in case none of the personal documents contain relevant info w.r.t. the query
 
 ## 📹 Demo Video
