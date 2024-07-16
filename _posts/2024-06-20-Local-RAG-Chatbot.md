@@ -48,6 +48,7 @@ Visit the project repository [here](https://github.com/enricollen/rag-conversati
    - Pull a LMM of your choice:
    ```sh
    ollama pull <model_name>  # e.g. ollama pull llama3:8b
+   ```
 
 ### Option 2: Use OpenAI API for GPT Models
 - **Set up OpenAI API**: you can sign up and get your API key from [OpenAI's website](https://openai.com/api/).
