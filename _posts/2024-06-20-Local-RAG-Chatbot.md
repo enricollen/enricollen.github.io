@@ -115,7 +115,7 @@ The demo was run on my PC with the following specifications:
 Here are some screenshots illustrating the chat:
 
 <img src="../assets/img/posts/local_rag/screenshot_1.jpg" alt="screenshot_1" width="600" height="600">
-<img src="../assets/img/posts/local_rag/screenshot_2.jpg" alt="screenshot_2" width="600" height="600">
-<img src="../assets/img/posts/local_rag/screenshot_3.jpg" alt="screenshot_3" width="600" height="600">
 <img src="../assets/img/posts/local_rag/screenshot_4.jpg" alt="screenshot_4" width="600" height="600">
+<img src="../assets/img/posts/local_rag/screenshot_3.jpg" alt="screenshot_3" width="600" height="600">
+<img src="../assets/img/posts/local_rag/screenshot_2.jpg" alt="screenshot_2" width="600" height="600">
 <img src="../assets/img/posts/local_rag/settings.jpg" alt="settings" width="600" height="600">
