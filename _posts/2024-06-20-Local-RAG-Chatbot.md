@@ -47,7 +47,7 @@ Visit the project repository [here](https://github.com/enricollen/rag-conversati
    - Visit [Ollama's official website](https://ollama.com/download) to download and install Ollama. Ensure you have sufficient hardware resources to run the local language model.
    - Pull a LMM of your choice:
    ```sh
-   ollama pull <model_name>  # e.g. ollama pull llama3:8b
+   ollama pull <model_name>  # e.g. ollama pull llama3.1:8b
    ```
 
 ### Option 2: Use OpenAI API for GPT Models
