@@ -27,8 +27,8 @@ To get this game running on your own pc, follow the steps described at my GitHub
 ## Screenshots 📸
 Here is a screenshot illustrating the client and server interaction:
 <div style="text-align: center;">
-<img src="..\assets\img\posts\multiclient_lottery_game\1.png" alt="yolov8_detection" width="600" height="600">
-<img src="..\assets\img\posts\multiclient_lottery_game\2.png" alt="yolov8_detection" width="600" height="600">
-<img src="..\assets\img\posts\multiclient_lottery_game\3.png" alt="yolov8_detection" width="600" height="600">
-<img src="..\assets\img\posts\multiclient_lottery_game\4.png" alt="yolov8_detection" width="600" height="600">
+<img src="../assets/img/posts/multiclient_lottery_game/1.png" alt="yolov8_detection" width="600" height="600">
+<img src="../assets/img/posts/multiclient_lottery_game/2.png" alt="yolov8_detection" width="600" height="600">
+<img src="../assets/img/posts/multiclient_lottery_game/3.png" alt="yolov8_detection" width="600" height="600">
+<img src="../assets/img/posts/multiclient_lottery_game/4.png" alt="yolov8_detection" width="600" height="600">
 </div>

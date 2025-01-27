@@ -45,9 +45,9 @@ Note: It's not possible to register new users for the moment, so you can try log
 ## Screenshots 📸
 Here are some screenshots illustrating the social network site:
 <div style="text-align: center;">
-<img src="..\assets\img\posts\social_network_site\pausa1.png" alt="yolov8_detection" width="600" height="600">
-<img src="..\assets\img\posts\social_network_site\pausa2.png" alt="yolov8_detection" width="600" height="600">
-<img src="..\assets\img\posts\social_network_site\pausa3.png" alt="yolov8_detection" width="600" height="600">
-<img src="..\assets\img\posts\social_network_site\pausa4.png" alt="yolov8_detection" width="600" height="600">
-<img src="..\assets\img\posts\social_network_site\pausa5.png" alt="yolov8_detection" width="600" height="600">
+<img src="../assets/img/posts/social_network_site/pausa1.png" alt="yolov8_detection" width="600" height="600">
+<img src="../assets/img/posts/social_network_site/pausa2.png" alt="yolov8_detection" width="600" height="600">
+<img src="../assets/img/posts/social_network_site/pausa3.png" alt="yolov8_detection" width="600" height="600">
+<img src="../assets/img/posts/social_network_site/pausa4.png" alt="yolov8_detection" width="600" height="600">
+<img src="../assets/img/posts/social_network_site/pausa5.png" alt="yolov8_detection" width="600" height="600">
 </div>
