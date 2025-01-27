@@ -20,5 +20,6 @@ To get the In Scena booking system running locally, follow the steps described a
 
 ## Screenshots 📸
 Here are some screenshots illustrating the user interface of the theatre booking system:
-![Screenshot 1](https://camo.githubusercontent.com/e6c204f22e75c0630280aa1055e4c6138b4a3e14a17b59a3acf936c25867f4ac/68747470733a2f2f692e6962622e636f2f5a6778433252642f696e7363656e61312e706e67)  
-![Screenshot 2](https://camo.githubusercontent.com/c2f2369219f7bf696cdba4c79623162d4cf6731937cfbe8a7e2ea6b14c691e52/68747470733a2f2f692e6962622e636f2f585662477374392f696e7363656e61322e706e67)
+<div style="text-align: center;">
+<img src="..\assets\img\posts\theatre_seat_booking_system\booking_app.png" alt="yolov8_detection" width="600" height="600">
+</div>

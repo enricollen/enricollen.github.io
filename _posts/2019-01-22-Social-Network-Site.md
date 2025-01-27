@@ -44,8 +44,10 @@ Note: It's not possible to register new users for the moment, so you can try log
 
 ## Screenshots 📸
 Here are some screenshots illustrating the social network site:
-![Screenshot 1](https://camo.githubusercontent.com/ce0e6a51964cc10d826bfb9c225173c5c2354b50cfcd5c023dd28e5441780170/68747470733a2f2f692e6962622e636f2f567659717157352f7061757361312e706e67)  
-![Screenshot 2](https://camo.githubusercontent.com/331ff2351d93cfddcdbfedf439047d28cd9eab068ad94f10c6003ba1bd54cf59/68747470733a2f2f692e6962622e636f2f666b44713439662f7061757361322e706e67)
-![Screenshot 3](https://camo.githubusercontent.com/150f77b9f5052ee9040940f446c4cfb3534d3d6fe7bedfc25ac004093619fcac/68747470733a2f2f692e6962622e636f2f39774a523877532f7061757361332e706e67)
-![Screenshot 4](https://camo.githubusercontent.com/e155b5bdb70f232e443eb794fcb6a21becd197c7e866380f57534d76ffaaa55b/68747470733a2f2f692e6962622e636f2f714a4d325953512f7061757361342e706e67)
-![Screenshot 5](https://camo.githubusercontent.com/18755367448de2ff18d4bebc435021af08544b9180b8fe844e93706be9b09235/68747470733a2f2f692e6962622e636f2f37474e714d465a2f7061757361352e706e67)
+<div style="text-align: center;">
+<img src="..\assets\img\posts\social_network_site\pausa1.png" alt="yolov8_detection" width="600" height="600">
+<img src="..\assets\img\posts\social_network_site\pausa2.png" alt="yolov8_detection" width="600" height="600">
+<img src="..\assets\img\posts\social_network_site\pausa3.png" alt="yolov8_detection" width="600" height="600">
+<img src="..\assets\img\posts\social_network_site\pausa4.png" alt="yolov8_detection" width="600" height="600">
+<img src="..\assets\img\posts\social_network_site\pausa5.png" alt="yolov8_detection" width="600" height="600">
+</div>

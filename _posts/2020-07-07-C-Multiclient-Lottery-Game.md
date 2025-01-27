@@ -25,7 +25,10 @@ To get this game running on your own pc, follow the steps described at my GitHub
 (if you enjoyed this content please consider leaving a star ⭐)
 
 ## Screenshots 📸
-Here is a screenshot illustrating the plugin being used within the chat:
-![Screenshot 1](https://camo.githubusercontent.com/48a233e1abad16b618b1c0f742b718d187e76e57a3e146c4f8af27433553abf7/68747470733a2f2f692e6962622e636f2f6e4c79704673582f312e706e67)
-![Screenshot 2](https://camo.githubusercontent.com/1c23654a5082ed5b8c306f3ad9eda51e0ad247393f30189054d963e4f8df4942/68747470733a2f2f692e6962622e636f2f4e3370574243542f342e706e67)
-![Screenshot 3](https://camo.githubusercontent.com/85041e56fe3df22fc73b45b35be7a95daef7c0085acc996cb56ed697554f48ad/68747470733a2f2f692e6962622e636f2f46596e3757714b2f372e706e67)
+Here is a screenshot illustrating the client and server interaction:
+<div style="text-align: center;">
+<img src="..\assets\img\posts\multiclient_lottery_game\1.png" alt="yolov8_detection" width="600" height="600">
+<img src="..\assets\img\posts\multiclient_lottery_game\2.png" alt="yolov8_detection" width="600" height="600">
+<img src="..\assets\img\posts\multiclient_lottery_game\3.png" alt="yolov8_detection" width="600" height="600">
+<img src="..\assets\img\posts\multiclient_lottery_game\4.png" alt="yolov8_detection" width="600" height="600">
+</div>
