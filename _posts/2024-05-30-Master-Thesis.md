@@ -10,7 +10,7 @@ Thesis Title:
 
 My Master Thesis, conducted in collaboration with ISTI-CNR of Pisa, focused on the topic of Deepfake Detection. Today, the misinformation spreads rapidly, detecting deepfakes and fake news has become crucial. However, there was a lack of research on combining these two areas. 
 My thesis aims to bridge this gap by proposing a new type of analysis that combines the detection of deepfakes and fake news.
-
+It is publicly available [HERE](https://etd.adm.unipi.it/t/etd-05082024-174758/).
 
 # Objectives: 🎯
 The primary aims of my thesis were to:
