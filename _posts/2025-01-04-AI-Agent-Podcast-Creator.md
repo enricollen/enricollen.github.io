@@ -14,6 +14,7 @@ For this project in particular i implemented a **fully local agentic podcast cre
 - [Ollama](https://ollama.com/) to run local LLMs.
 - [CrewAI framework](https://www.crewai.com/) for the AI Agent orchestration.
 - [Coqui TTS](https://github.com/coqui-ai/TTS) for audio generation.
+- [Streamlit](https://streamlit.io/) for creating an interactive web UI.
 
 The application automates the entire workflow of transforming news content from a website into a structured podcast with narration. Additionally, this project highlights how to enable interaction between two distinct crews within CrewAI, making it a versatile example for adapting to other use cases involving multiple collaborating crews.
 
