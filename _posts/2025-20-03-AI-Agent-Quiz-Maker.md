@@ -4,7 +4,6 @@ date: 2025-03-28 10:00 +0200
 categories: [Personal Projects, AI Agents]  
 tags: [AI Agents]  
 ---
-
 Recently OpenAI has released their [Agent SDK](https://openai.github.io/openai-agents-python/), so i decided to explor its potential to build something practical for education/learning porpouse.
 
 This led me to create an **automated pipeline that turns educational content into structured quizzes**. The system accepts either **PDF files** or **web URLs**, processes them using agents, and outputs **multiple-choice questions** with a structured scoring system.

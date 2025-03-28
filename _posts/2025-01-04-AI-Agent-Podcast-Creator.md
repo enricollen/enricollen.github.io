@@ -2,7 +2,7 @@
 title: 🎙️ AI Agents - Podcast Creator with Fully Local Setup
 date: 2025-01-04 21:30 +0200
 categories: [Personal Projects, AI Agents]
-tags: [Agents, crewAI]
+tags: [AI Agents, crewAI]
 ---
 We increasingly hear about AI Agents — i usually say that we have entered what is being called the "Agentic Spring", a phase where trends are shifting towards developing autonomous, specialized AI rather than all-knowing generalist assistants.
 
