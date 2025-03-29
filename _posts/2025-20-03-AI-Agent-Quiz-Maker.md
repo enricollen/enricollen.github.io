@@ -22,7 +22,7 @@ For this project, I built an agentic system with:
 
 Below is an overview of the architecture of the agentic pipeline that powers the Quiz Maker:
 
-<img src="../assets/img/posts/quiz_maker/quiz_maker_architecture.jpg" alt="architecture" width="600" height="600">
+<img src="../assets/img/posts/quiz_maker/quiz_maker_architecture.jpg" alt="architecture" width="400" height="300">
 
 
 ### Step 1: Provide Input
@@ -73,8 +73,8 @@ Each quiz is saved with this structure:
 ## 📺 Quiz Maker UI
 
 Here are some screenshots of the Streamlit interface:
-<img src="../assets/img/posts/quiz_maker/streamlit_ui_1.jpg" alt="screenshot_1" width="600" height="600">
-<img src="../assets/img/posts/quiz_maker/streamlit_ui_2.jpg" alt="screenshot_1" width="600" height="600">
+<img src="../assets/img/posts/quiz_maker/streamlit_ui_1.jpg" alt="screenshot_1" width="500" height="500">
+<img src="../assets/img/posts/quiz_maker/streamlit_ui_2.jpg" alt="screenshot_1" width="500" height="500">
 
 ---
 
