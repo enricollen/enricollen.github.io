@@ -18,9 +18,12 @@ For this project, I built an agentic system with:
 
 ---
 
-## 🛠️ How It Works
+## 🏗️ Architecture
 
-Below is an overview of the agent pipeline that powers the Quiz Maker:
+Below is an overview of the architecture of the agentic pipeline that powers the Quiz Maker:
+
+<img src="../assets/img/posts/quiz_maker/quiz_maker_architecture.jpg" alt="architecture" width="600" height="600">
+
 
 ### Step 1: Provide Input
 The user uploads one or more **PDF documents** or pastes a list of **web URLs**.
