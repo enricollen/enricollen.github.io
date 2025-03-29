@@ -22,7 +22,7 @@ For this project, I built an agentic system with:
 
 Below is an overview of the architecture of the agentic pipeline that powers the Quiz Maker:
 
-<img src="../assets/img/posts/quiz_maker/quiz_maker_architecture.jpg" alt="architecture" width="400" height="300">
+<img src="../assets/img/posts/quiz_maker/quiz_maker_architecture.jpg" alt="architecture" width="300" height="200">
 
 
 ### Step 1: Provide Input
