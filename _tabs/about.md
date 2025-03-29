@@ -9,7 +9,7 @@ order: 4
 
 <img src="../assets/img/avatar.jpeg" alt="profile_picture" width="200" height="200">
 
-Hello there! I'm Enrico Nello, a Computer Engineer with MSc degree in Artificial Intelligence & Data Engineering. I've had a passion for computing since my youth, which has shaped my academic paths until now. When I'm not geeking out 💻, I enjoy practicing wildlife photography 📸 and surfing 🏄‍♂️, hobbies that refresh my mind and enhance my creativity.
+Hello there! I'm Enrico Nello, a Computer Engineer with MSc degree in Artificial Intelligence & Data Engineering. I've had a passion for computing since my youth, which has shaped my academic paths until now. When I'm not geeking out 💻, I'm really into wildlife photography (check out some of my shots [here](https://www.juzaphoto.com/me.php?l=it&p=224911))📸 and surfing 🏄‍♂️, hobbies that refresh my mind and enhance my creativity.
 
 Feel free to check out my [GitHub profile](https://github.com/enricollen) for more detailed insights into my coding activities and repositories.
 
