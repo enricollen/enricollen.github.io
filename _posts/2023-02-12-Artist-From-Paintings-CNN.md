@@ -9,7 +9,7 @@ The project aims to create an algorithm that can accurately identify the artist 
 This project was originally develop for the course 'Computer Intelligence and Deep Learning' in MSc in Artificial Intelligence & Data Engineering at University of Pisa.
 
 ## Dataset 🖼️
-The dataset used is "Best Artworks of All Time," containing artworks of the 50 most influential artists, with about 8,000 unique images. The data was split into training, validation, and test sets with a ratio of 70% - 15% - 15%.
+The dataset used is [Best Artworks of All Time](https://www.kaggle.com/datasets/ikarus777/best-artworks-of-all-time) containing artworks of the 50 most influential artists, with about 8,000 unique images. The data was split into training, validation, and test sets with a ratio of 70% - 15% - 15%.
 
 ## CNN from Scratch 🧠
 Various CNN architectures were tested, starting with a simple model and progressively adding complexity through additional layers, dropout, regularization, and varying strides.
