@@ -74,7 +74,7 @@ Each quiz is saved with this structure:
 
 Here are some screenshots of the Streamlit interface:
 <img src="../assets/img/posts/quiz_maker/streamlit_ui_1.jpg" alt="screenshot_1" width="500" height="500">
-<img src="../assets/img/posts/quiz_maker/streamlit_ui_2.jpg" alt="screenshot_1" width="500" height="500">
+<img src="../assets/img/posts/quiz_maker/streamlit_ui_2.jpg" alt="screenshot_2" width="500" height="500">
 
 ---
 
