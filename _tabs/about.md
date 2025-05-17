@@ -25,7 +25,7 @@ Feel free to check out my [GitHub profile](https://github.com/enricollen) for mo
 
 ## 💼 Work Experience
 **Role**: AI Engineer   
-**Company**: Helaglobe  
+**Company**: [Helaglobe](https://helaglobe.com/)
 **Location**: Florence  
 **Duration**: September 2024 – Present  
 
