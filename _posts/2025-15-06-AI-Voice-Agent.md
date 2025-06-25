@@ -1,5 +1,5 @@
 ---
-title: 🧠 AI Agents - Voice Agent with custom tools  
+title: 🗣️🎤 AI Agents - Voice Agent with custom tools  
 date: 2025-06-15 10:00 +0200  
 categories: [Personal Projects, AI Agents]  
 tags: [AI Agents]  
@@ -90,7 +90,7 @@ CHAT_HISTORY_RATIO=0.8         # Ratio for chat history (80% of total)
 
 # 📺 Voice Agent UI
 Here are some screenshots of the UI interface:
-<img src="../assets/img/posts/fastrtc_voice_agent/chat_ui.webp" width="800" height="400">
+<img src="../assets/img/posts/fastrtc_voice_agent/chat_ui.webp" alt="chat ui" width="800" height="400">
 
 # 📺 Video Demo:
 To help understand how everything works together, i’ve included a quick demo showcasing the voice agent in action. I showed how the agent processes user input, optionally uses tools like the weather API, and converts responses into natural-sounding speech using one of the TTS providers. In the demo i tried different setups:
