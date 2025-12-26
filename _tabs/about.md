@@ -25,9 +25,14 @@ Feel free to check out my [GitHub profile](https://github.com/enricollen) for mo
 
 ## 💼 Work Experience
 **Role**: AI Engineer   
+**Company**: [ExtraRed](https://extrared.it/)
+**Location**: Pisa  
+**Duration**: January 2026 – Present
+
+**Role**: AI Engineer   
 **Company**: [Helaglobe](https://helaglobe.com/)
 **Location**: Florence  
-**Duration**: September 2024 – Present  
+**Duration**: September 2024 – December 2025
 
 ## 📄 CV
 
