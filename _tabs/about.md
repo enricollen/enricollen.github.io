@@ -9,9 +9,9 @@ order: 4
 
 <img src="../assets/img/avatar.jpeg" alt="profile_picture" width="200" height="200">
 
-Hello there! I'm Enrico Nello, a Computer Engineer with MSc degree in Artificial Intelligence & Data Engineering. I've had a passion for computing since my youth, which has shaped my academic paths until now. When I'm not geeking out 💻, I'm really into wildlife photography (check out some of my shots [here](https://www.juzaphoto.com/me.php?l=it&p=224911))📸 and surfing 🏄‍♂️, hobbies that refresh my mind and enhance my creativity.
+Hello there! I'm Enrico Nello, a Computer Engineer with MSc degree in Artificial Intelligence & Data Engineering. I've had a passion for computing since my youth, which has shaped my academic paths until now. When I'm not geeking out 💻, I'm really into wildlife photography (check out some of my shots <a href="https://www.juzaphoto.com/me.php?l=it&p=224911" target="_blank" rel="noopener noreferrer">here</a>)📸 and surfing 🏄‍♂️, hobbies that refresh my mind and enhance my creativity.
 
-Feel free to check out my [GitHub profile](https://github.com/enricollen) for more detailed insights into my coding activities and repositories.
+Feel free to check out my <a href="https://github.com/enricollen" target="_blank" rel="noopener noreferrer">GitHub profile</a> for more detailed insights into my coding activities and repositories.
 
 ## 🎓 Academic Background
 
@@ -25,12 +25,12 @@ Feel free to check out my [GitHub profile](https://github.com/enricollen) for mo
 
 ## 💼 Work Experience
 **Role**: AI Engineer   
-**Company**: [ExtraRed](https://extrared.it/)
+**Company**: <a href="https://extrared.it/" target="_blank" rel="noopener noreferrer">ExtraRed</a>   
 **Location**: Pisa  
 **Duration**: January 2026 – Present
 
 **Role**: AI Engineer   
-**Company**: [Helaglobe](https://helaglobe.com/)
+**Company**: <a href="https://helaglobe.com/" target="_blank" rel="noopener noreferrer">Helaglobe</a>    
 **Location**: Florence  
 **Duration**: September 2024 – December 2025
 
@@ -38,7 +38,7 @@ Feel free to check out my [GitHub profile](https://github.com/enricollen) for mo
 
 You can download my CV in PDF format by clicking the link below:
 
-- <a href="../assets/CV.pdf" download>Download CV</a>
+- <a href="../assets/CV.pdf" download target="_blank" rel="noopener noreferrer">Download CV</a>
 
 ## 📬 Contact Information
 
