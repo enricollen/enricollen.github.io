@@ -4,7 +4,14 @@ date: 2025-11-10 09:53 +0200
 categories: [Personal Projects, MCP Server]
 tags: [MCP, AI Agents, FastMCP, LLM]
 ---
-With the emergence of Model Context Protocol (MCP), AI assistants can now seamlessly integrate with external data sources and services. In this project, I built an **MCP server that provides comprehensive surf forecasts for any coastal location worldwide**, enabling AI assistants to deliver real-time wave conditions and intelligent surf quality assessments.
+
+## What is MCP?
+
+The **Model Context Protocol (MCP)** is an open standard developed by Anthropic that enables AI assistants to securely connect with external data sources and tools. Think of it as a universal adapter that allows LLMs to interact with databases, APIs, file systems, and other services in a standardized way. Instead of each AI assistant implementing custom integrations, MCP provides a common protocol where servers expose capabilities (tools, resources, and prompts) that any MCP-compatible client can consume. This architecture makes AI assistants vastly more powerful by giving them access to real-time data and the ability to perform actions beyond their training data.
+
+<img src="../assets/img/posts/mcp_server_surf_forecast/mcp-architecture.webp" alt="mcp-architecture" width="1000" height="800">
+
+Leveraging this powerful protocol, I built an **MCP server that provides comprehensive surf forecasts for any coastal location worldwide**, enabling AI assistants to deliver real-time wave conditions and intelligent surf quality assessments.
 
 The **Surf Forecast MCP Server** transforms complex marine weather data into actionable surf intelligence, making it easy for surfers and water sports enthusiasts to plan their sessions through conversational AI interfaces.
 
