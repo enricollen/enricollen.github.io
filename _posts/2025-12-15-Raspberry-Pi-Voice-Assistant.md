@@ -12,6 +12,12 @@ After building my [fastrtc voice agent](https://enricollen.github.io/posts/AI-Vo
 
 the main limitation of the original web-based version was that it required opening a browser and clicking buttons to interact. for a true hands-free experience at home, i needed **wake word detection** and **direct audio i/o** without any ui dependency.
 
+# 📺 Video Demo
+
+to see pamirca in action, check out this demo video showcasing the wake word detection, voice interaction, and tool usage:
+
+[![Raspberry Pi Voice Assistant Demo](https://img.youtube.com/vi/x3XwKcdNpGw/0.jpg)](https://www.youtube.com/watch?v=x3XwKcdNpGw)
+
 # 🎯 Project Goals
 
 the goal was simple but ambitious: create a fully functional voice assistant that:
@@ -245,12 +251,6 @@ user: "arrivederci"
 assistant: "arrivederci!"
 [returns to wake word listening]
 ```
-
-# 📺 Video Demo
-
-to see pamirca in action, check out this demo video showcasing the wake word detection, voice interaction, and tool usage:
-
-[![Raspberry Pi Voice Assistant Demo](https://img.youtube.com/vi/x3XwKcdNpGw/0.jpg)](https://www.youtube.com/watch?v=x3XwKcdNpGw)
 
 # 🎯 Use Cases
 It's a perfect alexa replacement with more control and privacy:
