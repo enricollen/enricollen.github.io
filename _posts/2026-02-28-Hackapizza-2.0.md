@@ -5,7 +5,7 @@ categories: [Hackaton, AI Agents]
 tags: [AI Agents, Multi-Agent Systems, Hackathon, datapizza]
 ---
 
-what a weekend!! on february 28th and march 1st, our team **"Cavalli al trotto 🐎"** won 🏆 [Hackapizza 2.0: Agent Edition](https://github.com/AlessioChen/HACKAPIZZA-2.0), the hackathon organized by [Datapizza](https://datapizza.tech/) in Milan — one of the most intense and stimulating competitions i've ever taken part in.
+what a weekend!! on february 28th and march 1st, our team **"Cavalli al trotto 🐎"** won 🏆 [Hackapizza 2.0: Agent Edition](https://hackathon.datapizza.com/), the hackathon organized by [Datapizza](https://datapizza.tech/) in Milan — one of the most intense and stimulating competitions i've ever taken part in.
 
 24 hours non-stop designing, testing and stress-testing advanced agentic systems, competing against 120 selected participants from all over Italy.
 
