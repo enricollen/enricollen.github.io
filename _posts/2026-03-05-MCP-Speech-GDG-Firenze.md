@@ -71,14 +71,6 @@ each subagent only has access to its own tools — clean separation of concerns,
 
 ---
 
-# 🙏 Thanks
-
-a huge thanks to the entire **GDG Firenze** team for the impeccable organization, and to **42 Firenze** for hosting us in their incredible space.
-
-the questions and discussions that emerged during the session — and continued over pizza — confirmed just how alive and curious this community is. can't wait for the next one!
-
----
-
 # 🔗 Resources
 
 all the material from the talk — slides, demo code, and setup instructions — is available on my GitHub:
@@ -86,6 +78,16 @@ all the material from the talk — slides, demo code, and setup instructions —
 👉 [enricollen/tech-talks — GDG Firenze: Model Context Protocol](https://github.com/enricollen/tech-talks/tree/main/2026/GDG%20Firenze%20-%20Model%20Context%20Protocol)
 
 feel free to use the slides, code, or any other material for your own projects or presentations — just please cite the source 🙏
+
+---
+
+## 🎥 Video
+
+the full recording of the talk is available below — enjoy!
+
+<div align="center">
+  <iframe width="700" height="394" src="https://www.youtube.com/embed/hBmMLZ5ZAy0" title="GDG Firenze - Model Context Protocol" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ---
 
