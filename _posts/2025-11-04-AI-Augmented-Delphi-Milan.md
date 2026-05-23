@@ -17,6 +17,13 @@ our work **"AI-Augmented Delphi: Design and Evaluation of a Human-Aligned LLM Wo
 
 developed at **[Helaglobe](https://www.helaglobe.com/)**, the study introduces an AI-assisted workflow for the **Delphi consensus process**, applied to the field of RNA-based therapeutics — a fast-growing area that brings both exciting opportunities and new regulatory and safety challenges.
 
+> **what is the Delphi consensus method?**
+> - a panel of experts independently rates a set of statements
+> - results are aggregated and shared with the group
+> - statements that don't reach agreement are revised and re-evaluated in successive rounds
+> - widely used in clinical guidelines, medical research, and policy
+> - the bottleneck: the revision phase is slow and demanding — experts must review feedback, verify literature, and rewrite statements by hand
+
 the core question we set out to answer: can a multi-agent AI system replicate the quality of human expert revision in a Delphi process, while accelerating consensus formation?
 
 ---
