@@ -13,7 +13,7 @@ our work **"AI-Augmented Delphi: Design and Evaluation of a Human-Aligned LLM Wo
 
 ---
 
-# 🎯 The Work
+## 🎯 The Work
 
 developed at **[Helaglobe](https://www.helaglobe.com/)**, the study introduces an AI-assisted workflow for the **Delphi consensus process**, applied to the field of RNA-based therapeutics — a fast-growing area that brings both exciting opportunities and new regulatory and safety challenges.
 
@@ -28,7 +28,7 @@ the core question we set out to answer: can a multi-agent AI system replicate th
 
 ---
 
-# 🧪 Methods
+## 🧪 Methods
 
 fifty international panelists — clinicians, researchers, and patient representatives — were split into two parallel groups of 25, each evaluating the same 28 clinical statements in a controlled Delphi process:
 
@@ -49,7 +49,7 @@ to ensure evidence grounding, a **hybrid RAG module** combined a dense retriever
 
 ---
 
-# 📊 Results
+## 📊 Results
 
 <div align="center">
   <img src="../assets/img/posts/ai_augmented_delphi_milan/ai-augmented-delphi6.jpg" alt="ai-augmented-delphi results" width="700">
@@ -64,7 +64,7 @@ the AI-assisted workflow recovered significantly more sub-threshold statements (
 
 ---
 
-# 💡 Key Takeaways
+## 💡 Key Takeaways
 
 - **AI can closely match expert performance** in structured consensus workflows when properly supervised
 - **retrieval-augmented generation** is key: grounding revisions in verified evidence prevents hallucinations and ensures auditability
@@ -74,7 +74,7 @@ the AI-assisted workflow recovered significantly more sub-threshold statements (
 
 ---
 
-# 🙏 Thanks
+## 🙏 Thanks
 
 thanks to everyone who made this work possible: **Davide Cafiero**, **Fabio Tedone**, **Elena Caproni**, and **Lucia Politi**, and to the [Helaglobe](https://www.helaglobe.com/) team.
 
