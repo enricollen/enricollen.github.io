@@ -12,7 +12,7 @@ a multidisciplinary event bringing together nephrologists, biologists, nurses, a
 the event was organized by [Italian Medical Research](https://www.italianmedicalresearch.it/) and [Helaglobe](https://www.helaglobe.com/).
 
 <div align="center">
-  <img src="../assets/img/posts/ecm_napoli/ecm_napoli1.jpg" alt="ecm_napoli" width="600">
+  <img src="../assets/img/posts/ecm_napoli/ecm_napoli1.jpg" alt="ecm_napoli" width="350">
 </div>
 
 ---
@@ -53,7 +53,7 @@ territorial dialysis centers and reference centers working together — because 
 
 # 🙏 Thanks
 
-thanks to **Antonio Pisani**, **Ersilia Satta**, and **Renata Rinaldi** for the scientific direction, and to the whole team — **Davide Cafiero**, **Tania Vuoso**, **Cinzia Diana** — for making this event happen.
+thanks to the whole team — **Davide Cafiero**, **Tania Vuoso**, **Cinzia Diana** — for making this event happen.
 
 it was a meaningful and inspiring day, and a strong reminder of why this kind of knowledge-sharing between technologists and clinicians matters so much.
 
@@ -61,9 +61,9 @@ it was a meaningful and inspiring day, and a strong reminder of why this kind of
 
 ## 📸 Photos
 
-<div style="display: flex; flex-wrap: wrap; gap: 10px;">
-  <img src="../assets/img/posts/ecm_napoli/ecm_napoli1.jpg" alt="ecm_napoli" style="width: 300px; height: 400px; object-fit: cover;">
-  <img src="../assets/img/posts/ecm_napoli/ecm_napoli2.jpg" alt="ecm_napoli" style="width: 300px; height: 400px; object-fit: cover;">
-  <img src="../assets/img/posts/ecm_napoli/ecm_napoli3.jpg" alt="ecm_napoli" style="width: 300px; height: 400px; object-fit: cover;">
-  <img src="../assets/img/posts/ecm_napoli/ecm_napoli4.jpg" alt="ecm_napoli" style="width: 300px; height: 400px; object-fit: cover;">
+<div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: flex-start;">
+  <img src="../assets/img/posts/ecm_napoli/ecm_napoli1.jpg" alt="ecm_napoli" style="width: 220px; height: 285px; object-fit: cover;">
+  <img src="../assets/img/posts/ecm_napoli/ecm_napoli2.jpg" alt="ecm_napoli" style="width: 240px; height: 320px; object-fit: cover;">
+  <img src="../assets/img/posts/ecm_napoli/ecm_napoli3.jpg" alt="ecm_napoli" style="width: 240px; height: 310px; object-fit: cover;">
+  <img src="../assets/img/posts/ecm_napoli/ecm_napoli4.jpg" alt="ecm_napoli" style="width: 215px; height: 362px; object-fit: cover;">
 </div>

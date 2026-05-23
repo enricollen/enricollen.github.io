@@ -7,6 +7,8 @@ tags: [MCP, AI Agents, Multi-Agent Systems, Public Speaking, GDG]
 
 what an incredible evening!! on march 5th i had the pleasure of speaking at the [Google Developer Group Firenze](https://gdg.community.dev/gdg-firenze/) meetup, talking about the **Model Context Protocol (MCP)** in front of a packed room at [42 Firenze](https://42firenze.it/).
 
+<div align="center">👉 <a href="https://gdg.community.dev/events/details/google-gdg-firenze-presents-model-context-protocol-limportanza-della-standardizzazione-nellera-degli-agenti-ai/">OFFICIAL EVENT PAGE</a></div>
+
 the energy in the room, the questions, the conversations that kept going during the networking session after — it was a fantastic reminder of how vibrant and passionate this community is.
 <div align="center">
   <img src="../assets/img/posts/gdg_mcp_speech/2.jpeg" alt="hackapizza2" width="600" height="500">
