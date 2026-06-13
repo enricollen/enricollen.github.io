@@ -6,7 +6,7 @@ tags: [Raspberry Pi, NAS, OpenMediaVault, RAID, Docker, Nextcloud, Immich]
 ---
 
 <div align="center">
-  <img src="../assets/img/posts/pi_nas/5.jpg" alt="cover_image" style="width:100%; max-width:600px; height:auto;">
+  <img src="../assets/img/posts/pi_nas/5.jpg" alt="cover_image" style="width:100%; max-width:900px; height:300px; object-fit:cover; object-position:center;">
 </div>
 
 i decided to replace my cloud storage subscriptions with a fully self-hosted solution. the result is a raspberry pi 5 running **openmediavault** with a **raid 5 array**, hosting **nextcloud** and **immich** — accessible from anywhere via cloudflare tunnel.
