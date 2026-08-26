@@ -20,7 +20,7 @@ most retrieval embedding models compress a whole passage into **one vector**. Co
 that keeps fine-grained detail — exact names, numbers, phrasing — that gets blurred away by single-vector compression, at the cost of a larger index. it's the retrieval approach behind [ColBERT / ColBERTv2](https://github.com/stanford-futuredata/ColBERT) from Stanford, and the one [PyLate](https://github.com/lightonai/pylate) (the library this project is built on) makes practical to train and serve.
 
 <details markdown="1">
-<summary><strong>🔎 curious how late interaction actually works, step by step? (click to expand)</strong></summary>
+<summary style="font-size: 1.3em; cursor: pointer;"><strong>🔎 curious how late interaction actually works, step by step? (click to expand)</strong></summary>
 
 <br>
 
@@ -85,7 +85,8 @@ AT QUERY TIME
   cosine(query, doc B) = 0.79
 ```
 
-**input:** the query text alone, and each document text alone — the model never sees a query and a document together, ever. **output:** one similarity number per document, compared only after both sides are already reduced to a single vector each.
+- **input:** the query text alone, and each document text alone — the model never sees a query and a document together, ever.
+- **output:** one similarity number per document, compared only after both sides are already reduced to a single vector each.
 
 doc A still edges ahead here, but barely — squeezing "Roma è la capitale d'Italia" down to one vector mixes the fact "capital of Italy" together with everything else in the sentence, so the model can't specifically tell the query "yes, *Italia* is mentioned" — it can only compare two blurry overall impressions.
 
@@ -97,7 +98,8 @@ AT QUERY TIME — repeated for every candidate document, nothing precomputed
   [query + doc B] ──[Cross-Encoder]──► relevance score = 3.4
 ```
 
-**input:** the query **and** the document *together*, fed into the model as one combined sequence, so every word on both sides can directly attend to every other word. **output:** one relevance score per document — but it took a full model pass, per document, to get it, since nothing about doc A or doc B could be computed ahead of time.
+- **input:** the query **and** the document *together*, fed into the model as one combined sequence, so every word on both sides can directly attend to every other word.
+- **output:** one relevance score per document — but it took a full model pass, per document, to get it, since nothing about doc A or doc B could be computed ahead of time.
 
 much more decisive gap than "no interaction" — the model can directly see "capitale" sitting right next to "d'Italia" in doc A, and that's missing in doc B. the cost: this has to be redone from scratch for every single candidate document, every single query, which is why cross-encoders only rerank a short list rather than search a whole corpus.
 
@@ -105,26 +107,35 @@ much more decisive gap than "no interaction" — the model can directly see "cap
 
 ```
 OFFLINE — before any query exists
-  doc A tokens (Roma, capitale, d', Italia)   ──[Encoder]──► 4 token embeddings, stored
+  doc A tokens (Roma, capitale, d', Italia)         ──[Encoder]──► 4 token embeddings, stored
   doc B tokens (Milano, capitale, economica, Paese) ──[Encoder]──► 4 token embeddings, stored
 
 AT QUERY TIME
   query tokens (capitale, Italia) ──[Encoder]──► 2 token embeddings
-
-  MaxSim(query, doc A) — compare every query token against every doc A token, keep only the best:
-    "capitale" vs Roma=0.74, capitale=1.00, d'=0.02, Italia=0.15  → best = 1.00 (capitale)
-    "Italia"   vs Roma=0.77, capitale=0.13, d'=0.02, Italia=1.00  → best = 1.00 (Italia)
-    score = 1.00 + 1.00 = 2.00
-
-  MaxSim(query, doc B) — compare every query token against every doc B token, keep only the best:
-    "capitale" vs Milano=0.35, capitale=0.96, economica=0.23, Paese=0.68  → best = 0.96 (capitale)
-    "Italia"   vs Milano=0.12, capitale=0.12, economica=0.12, Paese=0.74  → best = 0.74 (Paese)
-    score = 0.96 + 0.74 = 1.70
-
-  ranking: doc A (2.00) > doc B (1.70)
 ```
 
-**input:** query and document encoded completely separately, same as "no interaction" — but instead of one vector each, every token keeps its own, and document token vectors are computed and stored offline, before any query exists. **output:** not one comparison, but many — every query token is compared against *every* document token (4 comparisons per query token per document above), and only the single **best** one counts toward that query token's contribution to the final score.
+- **input:** query and document encoded completely separately, same as "no interaction" — but instead of one vector each, every token keeps its own, and document token vectors are computed and stored offline, before any query exists.
+- **output:** not one comparison, but many — every query token is compared against *every* document token, and only the single **best** one per row counts toward the final score.
+
+**MaxSim(query, doc A)** — one row per query token, one column per doc A token, best match per row in bold:
+
+| | Roma | capitale | d' | Italia |
+|---|---|---|---|---|
+| **capitale** | 0.74 | **1.00** | 0.02 | 0.15 |
+| **Italia** | 0.77 | 0.13 | 0.02 | **1.00** |
+
+`score(doc A) = 1.00 (capitale) + 1.00 (Italia) = 2.00`
+
+**MaxSim(query, doc B)** — same idea, against doc B's tokens:
+
+| | Milano | capitale | economica | Paese |
+|---|---|---|---|---|
+| **capitale** | 0.35 | **0.96** | 0.23 | 0.68 |
+| **Italia** | 0.12 | 0.12 | 0.12 | **0.74** |
+
+`score(doc B) = 0.96 (capitale) + 0.74 (Paese) = 1.70`
+
+**ranking: doc A (2.00) > doc B (1.70)**
 
 both documents match `capitale` almost perfectly (1.00 and 0.96), since both literally contain that exact word — MaxSim doesn't get fooled or blurred by that, it just correctly scores it as a strong match on both sides. the ranking is decided by the *other* query token: `Italia` finds a near-perfect match inside doc A (the word "Italia" itself, 1.00), but the best match it finds anywhere in doc B is `Paese` ("country", 0.74) — related, clearly weaker. that's the level of detail a single pooled vector throws away, and that a cross-encoder would also catch — but only by paying the full per-document cost that late interaction avoids by precomputing document tokens once, offline.
 
