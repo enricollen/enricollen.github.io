@@ -1,6 +1,6 @@
 ---
 title: 🇮🇹🔍 ItColBERT - An Italian Late-Interaction Retriever
-date: 2026-08-26 16:00 +0200
+date: 2026-08-26 10:00 +0200
 categories: [Personal Projects, ItColBERT - Italian Late-Interaction Retriever]
 tags: [NLP, Information Retrieval, ColBERT, PyLate, Hugging Face, RAG]
 ---
