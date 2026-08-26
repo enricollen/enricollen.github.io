@@ -111,22 +111,22 @@ OFFLINE — before any query exists
 AT QUERY TIME
   query tokens (capitale, Italia) ──[Encoder]──► 2 token embeddings
 
-  MaxSim(query, doc A):
-    "capitale" → best match in doc A = "capitale"  (0.97)
-    "Italia"   → best match in doc A = "Italia"    (0.95)
-    score = 0.97 + 0.95 = 1.92
+  MaxSim(query, doc A) — compare every query token against every doc A token, keep only the best:
+    "capitale" vs Roma=0.74, capitale=1.00, d'=0.02, Italia=0.15  → best = 1.00 (capitale)
+    "Italia"   vs Roma=0.77, capitale=0.13, d'=0.02, Italia=1.00  → best = 1.00 (Italia)
+    score = 1.00 + 1.00 = 2.00
 
-  MaxSim(query, doc B):
-    "capitale" → best match in doc B = "capitale"  (0.97)
-    "Italia"   → best match in doc B = "Paese"     (0.55)
-    score = 0.97 + 0.55 = 1.52
+  MaxSim(query, doc B) — compare every query token against every doc B token, keep only the best:
+    "capitale" vs Milano=0.35, capitale=0.96, economica=0.23, Paese=0.68  → best = 0.96 (capitale)
+    "Italia"   vs Milano=0.12, capitale=0.12, economica=0.12, Paese=0.74  → best = 0.74 (Paese)
+    score = 0.96 + 0.74 = 1.70
 
-  ranking: doc A (1.92) > doc B (1.52)
+  ranking: doc A (2.00) > doc B (1.70)
 ```
 
-**input:** query and document encoded completely separately, same as "no interaction" — but instead of one vector each, every token keeps its own, and document token vectors are computed and stored offline, before any query exists. **output:** not one comparison, but many — every query token gets matched against every document token, and only the *best* match per query token counts toward the final score.
+**input:** query and document encoded completely separately, same as "no interaction" — but instead of one vector each, every token keeps its own, and document token vectors are computed and stored offline, before any query exists. **output:** not one comparison, but many — every query token is compared against *every* document token (4 comparisons per query token per document above), and only the single **best** one counts toward that query token's contribution to the final score.
 
-both documents match `capitale` almost perfectly, since both literally contain that exact word — MaxSim doesn't get fooled or blurred by that, it just correctly scores it as a strong match on both sides. the ranking is decided by the *other* query token: `Italia` finds a near-perfect match inside doc A (the word "Italia" itself), but in doc B the best it can do is `Paese` ("country") — related, clearly weaker. that's the level of detail a single pooled vector throws away, and that a cross-encoder would also catch — but only by paying the full per-document cost that late interaction avoids by precomputing document tokens once, offline.
+both documents match `capitale` almost perfectly (1.00 and 0.96), since both literally contain that exact word — MaxSim doesn't get fooled or blurred by that, it just correctly scores it as a strong match on both sides. the ranking is decided by the *other* query token: `Italia` finds a near-perfect match inside doc A (the word "Italia" itself, 1.00), but the best match it finds anywhere in doc B is `Paese` ("country", 0.74) — related, clearly weaker. that's the level of detail a single pooled vector throws away, and that a cross-encoder would also catch — but only by paying the full per-document cost that late interaction avoids by precomputing document tokens once, offline.
 
 </details>
 
