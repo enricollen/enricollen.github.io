@@ -19,6 +19,100 @@ most retrieval embedding models compress a whole passage into **one vector**. Co
 
 that keeps fine-grained detail — exact names, numbers, phrasing — that gets blurred away by single-vector compression, at the cost of a larger index. it's the retrieval approach behind [ColBERT / ColBERTv2](https://github.com/stanford-futuredata/ColBERT) from Stanford, and the one [PyLate](https://github.com/lightonai/pylate) (the library this project is built on) makes practical to train and serve.
 
+<details markdown="1">
+<summary><strong>🔎 curious how late interaction actually works, step by step? (click to expand)</strong></summary>
+
+<br>
+
+**Single vector vs. multi-vector representations**
+
+a "normal" dense retriever squeezes an entire passage — however long — into **one fixed-size vector**, a single point that's supposed to summarize its whole meaning. a multi-vector representation instead keeps **one vector per token**: the sentence "AI improves web search" doesn't become one blob, it becomes four small vectors, one per word, each preserving that word's own meaning in context.
+
+<div align="center">
+  <img src="../assets/img/posts/it_colbert/single_vs_multivector.png" alt="single vector vs multivector representation" style="width:100%; max-width:750px;">
+  <br><em>source: <a href="https://qdrant.tech/documentation/tutorials-search-engineering/using-multivector-representations/">Qdrant docs — multivector representations</a></em>
+</div>
+
+<br>
+
+**No interaction vs. early interaction vs. late interaction**
+
+the three retrieval families differ in **when** the query and the document actually "meet":
+
+- **no interaction** (plain dense retrieval / bi-encoders): query and document are each squeezed into a single vector, completely independently, and only compared at the very end via a cheap similarity function (cosine/dot product). every document can be encoded **offline, once**, and at query time only the query needs encoding — extremely fast, but the model never sees query and document together, so a lot of nuance gets averaged away.
+- **early interaction** (cross-encoders): query and document text are concatenated and pushed through the transformer **together**, so every document token can attend to every query token through several self-attention layers. this is the most accurate scoring approach — but nothing about the document can be precomputed, so the full model has to rerun **per document, per query**. too slow to search a whole corpus with; used only to rerank a short candidate list.
+- **late interaction** (ColBERT-style): documents are still encoded independently and fully precomputable offline — but as **many** token vectors, not one. at query time only the query needs fresh encoding; the actual query↔document comparison happens at scoring time via MaxSim. this recovers much of a cross-encoder's token-level precision while keeping the expensive part (encoding documents) something done once, offline — not per query.
+
+<div align="center">
+  <img src="../assets/img/posts/it_colbert/interaction_types.png" alt="no interaction vs early interaction vs late interaction diagram" style="width:100%; max-width:900px;">
+  <br><em>source: <a href="https://qdrant.tech/course/multi-vector-search/module-1/late-interaction-basics/">Qdrant course — late interaction basics</a></em>
+</div>
+
+<br>
+
+**The MaxSim operator, in words**
+
+for every single query token, MaxSim looks across **all** of a document's token vectors and finds the one that matches best — then adds up these best-matches, one per query token, into the document's final score. so a document doesn't need to match the query's *overall* meaning; for every individual query token, it just needs *somewhere* in the text a close match to that specific word. that's exactly what lets late interaction preserve exact names, numbers and phrasing — the things a single averaged vector blurs away.
+
+<div align="center">
+  <img src="../assets/img/posts/it_colbert/maxsim_operator.jpg" alt="ColBERT MaxSim operator diagram" style="width:100%; max-width:650px;">
+  <br><em>source: <a href="https://www.linkedin.com/posts/shubhendu-sharma_rag-retrievalaugmentedgeneration-colbert-activity-7440947799581499392-pOzw/">Shubhendu Sharma, LinkedIn</a></em>
+</div>
+
+<br>
+
+**A worked example**
+
+illustrative numbers below, not real model output (the "Try it" section further down has that) — just enough to make the difference concrete. take one query and two candidate documents:
+
+- **query:** *"capitale Italia"*
+- **doc A:** *"Roma è la capitale d'Italia"* (Rome is the capital of Italy)
+- **doc B:** *"Milano è la capitale economica del Paese"* (Milan is the economic capital of the country)
+
+doc A is obviously the right answer to a human. here's how each architecture "sees" that:
+
+*no interaction (single vector).* both documents get compressed into one blob representing roughly "a city that is some kind of capital." toy cosine similarity to the query:
+
+| Document | Similarity to query |
+|---|---|
+| Doc A | 0.71 |
+| Doc B | 0.69 |
+
+nearly tied — squeezing everything into one vector blurs away the fact that only doc A actually names Italy as the country it's the capital *of*.
+
+*early interaction (cross-encoder).* query and document are concatenated and jointly attended over; the output is a single opaque relevance score, not decomposable per word:
+
+| Document | Cross-encoder score |
+|---|---|
+| Doc A | 8.7 |
+| Doc B | 3.1 |
+
+very decisive — but this required a full transformer pass **per document, at query time**, which is why cross-encoders only rerank a short list rather than search a whole corpus.
+
+*late interaction (MaxSim).* each document keeps one vector per token (stopwords dropped here only for readability — the real model keeps every subword). MaxSim compares every query token against every document token and keeps the best match per query token:
+
+**doc A** — tokens: Roma, capitale, d', Italia
+
+| query token | Roma | capitale | d' | Italia | best match |
+|---|---|---|---|---|---|
+| capitale | 0.42 | **0.97** | 0.05 | 0.30 | capitale → 0.97 |
+| Italia | 0.35 | 0.28 | 0.05 | **0.95** | Italia → 0.95 |
+
+`MaxSim(doc A) = 0.97 + 0.95 = 1.92`
+
+**doc B** — tokens: Milano, capitale, economica, Paese
+
+| query token | Milano | capitale | economica | Paese | best match |
+|---|---|---|---|---|---|
+| capitale | 0.20 | **0.97** | 0.38 | 0.15 | capitale → 0.97 |
+| Italia | 0.18 | 0.25 | 0.20 | **0.55** | Paese → 0.55 |
+
+`MaxSim(doc B) = 0.97 + 0.55 = 1.52`
+
+late interaction correctly ranks **doc A (1.92) above doc B (1.52)**. notice both documents match the query token *"capitale"* equally well — both literally contain that word — but *"Italia"* only finds a near-perfect match in doc A; in doc B the best it can do is *"Paese"* ("country"), related but weaker. a single vector has no way to preserve that distinction, since it already blended "capitale" into the rest of the document before the query even existed. a cross-encoder *could* catch it too, just not without rerunning the full model per document. MaxSim gets most of that precision while still precomputing every document vector exactly once, offline — that's the whole trade late interaction is built around.
+
+</details>
+
 ## 🎯 Why an Italian-Specialized Model?
 
 before this project, the Italian options were:
