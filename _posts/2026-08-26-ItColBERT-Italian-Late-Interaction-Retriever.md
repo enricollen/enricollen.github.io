@@ -63,78 +63,70 @@ for every single query token, MaxSim looks across **all** of a document's token 
 
 **A worked example**
 
-illustrative numbers below, not real model output (the "Try it" section further down has that) — just enough to make the difference concrete, with every number actually computed rather than made up on the spot. take one query and two candidate documents:
+illustrative numbers below, not real model output (the "Try it" section further down has that) — just enough to make the difference concrete. take one query and two candidate documents:
 
 - **query:** *"capitale Italia"* → tokens: `capitale`, `Italia`
 - **doc A:** *"Roma è la capitale d'Italia"* (Rome is the capital of Italy) → tokens (stopwords dropped for readability): `Roma`, `capitale`, `d'`, `Italia`
 - **doc B:** *"Milano è la capitale economica del Paese"* (Milan is the economic capital of the country) → tokens: `Milano`, `capitale`, `economica`, `Paese`
 
-doc A is obviously the right answer to a human. to make the arithmetic followable, every token above gets a tiny **4-dimensional toy vector** along four made-up axes — *"capital/seat-of-government"*, *"Italy the country"*, *"Milan / economic"*, and *"meaningless filler word"*. real ColBERT vectors have 128 learned dimensions; these four are invented purely so the numbers below can be checked by hand:
+doc A is obviously the right answer to a human. here's what each architecture actually receives as input, and what it hands back as output.
 
-| Token | capital | italy | milan/economic | filler |
-|---|---|---|---|---|
-| query: `capitale` | 0.95 | 0.10 | 0.05 | 0.00 |
-| query: `Italia` | 0.05 | 0.95 | 0.05 | 0.00 |
-| doc A: `Roma` | 0.55 | 0.60 | 0.05 | 0.10 |
-| doc A: `capitale` | 0.96 | 0.07 | 0.04 | 0.00 |
-| doc A: `d'` | 0.02 | 0.02 | 0.01 | 0.90 |
-| doc A: `Italia` | 0.04 | 0.94 | 0.04 | 0.02 |
-| doc B: `Milano` | 0.25 | 0.05 | 0.80 | 0.05 |
-| doc B: `capitale` | 0.88 | 0.05 | 0.30 | 0.00 |
-| doc B: `economica` | 0.15 | 0.05 | 0.85 | 0.02 |
-| doc B: `Paese` | 0.30 | 0.35 | 0.20 | 0.05 |
+**No interaction (bi-encoder)**
 
-every similarity number below is the **cosine similarity** between two of these vectors — how aligned their directions are, from -1 (opposite) to 1 (identical). worked by hand for one pair, query `capitale` vs. doc A's `capitale`: dot product = (0.95×0.96)+(0.10×0.07)+(0.05×0.04)+(0.00×0.00) = 0.921; vector lengths ≈ 0.957 and ≈ 0.963; cosine = 0.921 ÷ (0.957×0.963) ≈ **1.00** — near-perfect alignment, as expected for the literal same word.
+```
+OFFLINE — before any query exists
+  doc A text ──[Encoder]──► doc A embedding  (1 vector, stored in an index)
+  doc B text ──[Encoder]──► doc B embedding  (1 vector, stored in an index)
 
-**no interaction (single vector / bi-encoder).**
+AT QUERY TIME
+  query text ──[Encoder]──► query embedding  (1 vector)
 
-- **input:** the query text alone, and each document text alone — encoded completely separately, never together, never even at the same time.
-- **what happens:** all of a text's token vectors above get averaged ("pooled") into one single vector: q̄ = mean(`capitale`, `Italia`) = [0.50, 0.53, 0.05, 0.00]; docA-pooled = mean(4 tokens) = [0.39, 0.41, 0.04, 0.26]; docB-pooled = mean(4 tokens) = [0.40, 0.13, 0.54, 0.03].
-- **output:** one cosine similarity score per document — a single number, query-vector vs. that document's single vector, nothing else:
+  cosine(query, doc A) = 0.82
+  cosine(query, doc B) = 0.79
+```
 
-| Document | Similarity to query |
-|---|---|
-| Doc A | 0.91 |
-| Doc B | 0.59 |
+**input:** the query text alone, and each document text alone — the model never sees a query and a document together, ever. **output:** one similarity number per document, compared only after both sides are already reduced to a single vector each.
 
-doc A still ranks higher here — but only because in this toy example the distinguishing word (`Italia`) is 1 of just 4 tokens per document. average that same word into a real document of a few hundred words and its share of the pooled vector shrinks toward nothing; the pooled vector ends up dominated by whatever's most common in the text, not by what actually answers the query. that dilution — not "always gets the ranking wrong" — is the real weakness late interaction is built to avoid.
+doc A still edges ahead here, but barely — squeezing "Roma è la capitale d'Italia" down to one vector mixes the fact "capital of Italy" together with everything else in the sentence, so the model can't specifically tell the query "yes, *Italia* is mentioned" — it can only compare two blurry overall impressions.
 
-**early interaction (cross-encoder).**
+**Early interaction (cross-encoder)**
 
-- **input:** query **and** document together, concatenated into one sequence and pushed through the transformer jointly, e.g. `[CLS] capitale Italia [SEP] Roma è la capitale d'Italia [SEP]`. every document token can attend to every query token (and vice versa) through several self-attention layers before any score exists.
-- **output:** a single number — a raw relevance **logit**, not a vector, nothing decomposable per word — usually passed through a sigmoid to turn it into a 0–1 relevance probability:
+```
+AT QUERY TIME — repeated for every candidate document, nothing precomputed
+  [query + doc A] ──[Cross-Encoder]──► relevance score = 9.1
+  [query + doc B] ──[Cross-Encoder]──► relevance score = 3.4
+```
 
-| Document | Raw logit | σ(logit) → relevance probability |
-|---|---|---|
-| Doc A | 4.2 | 0.985 |
-| Doc B | -0.8 | 0.310 |
+**input:** the query **and** the document *together*, fed into the model as one combined sequence, so every word on both sides can directly attend to every other word. **output:** one relevance score per document — but it took a full model pass, per document, to get it, since nothing about doc A or doc B could be computed ahead of time.
 
-very decisive — joint attention lets the model directly notice that doc A follows "capitale" with "d'Italia" while doc B doesn't. but producing this single number required a full transformer forward pass **per document, at query time** — nothing about a document can be computed before the query is known, since the model only sees the two together. that's why cross-encoders only rerank a short list of candidates (tens of documents) instead of searching an entire corpus directly.
+much more decisive gap than "no interaction" — the model can directly see "capitale" sitting right next to "d'Italia" in doc A, and that's missing in doc B. the cost: this has to be redone from scratch for every single candidate document, every single query, which is why cross-encoders only rerank a short list rather than search a whole corpus.
 
-**late interaction (MaxSim).**
+**Late interaction (ColBERT / MaxSim)**
 
-- **input:** query and document encoded **completely separately** — exactly like "no interaction" — but instead of pooling down to one vector, every token keeps its own. document token vectors can be computed and stored **before any query exists**; at search time only the query needs fresh encoding.
-- **output:** not one number from a single comparison, but a score built from many — every query token is compared against every document token, and the best match per query token is kept and summed:
+```
+OFFLINE — before any query exists
+  doc A tokens (Roma, capitale, d', Italia)   ──[Encoder]──► 4 token embeddings, stored
+  doc B tokens (Milano, capitale, economica, Paese) ──[Encoder]──► 4 token embeddings, stored
 
-*doc A* — tokens: `Roma`, `capitale`, `d'`, `Italia`
+AT QUERY TIME
+  query tokens (capitale, Italia) ──[Encoder]──► 2 token embeddings
 
-| query token | Roma | capitale | d' | Italia | best match |
-|---|---|---|---|---|---|
-| `capitale` | 0.74 | **1.00** | 0.02 | 0.15 | capitale → 1.00 |
-| `Italia` | 0.77 | 0.13 | 0.02 | **1.00** | Italia → 1.00 |
+  MaxSim(query, doc A):
+    "capitale" → best match in doc A = "capitale"  (0.97)
+    "Italia"   → best match in doc A = "Italia"    (0.95)
+    score = 0.97 + 0.95 = 1.92
 
-`MaxSim(doc A) = 1.00 + 1.00 = 2.00`
+  MaxSim(query, doc B):
+    "capitale" → best match in doc B = "capitale"  (0.97)
+    "Italia"   → best match in doc B = "Paese"     (0.55)
+    score = 0.97 + 0.55 = 1.52
 
-*doc B* — tokens: `Milano`, `capitale`, `economica`, `Paese`
+  ranking: doc A (1.92) > doc B (1.52)
+```
 
-| query token | Milano | capitale | economica | Paese | best match |
-|---|---|---|---|---|---|
-| `capitale` | 0.35 | **0.96** | 0.23 | 0.68 | capitale → 0.96 |
-| `Italia` | 0.12 | 0.12 | 0.12 | **0.74** | Paese → 0.74 |
+**input:** query and document encoded completely separately, same as "no interaction" — but instead of one vector each, every token keeps its own, and document token vectors are computed and stored offline, before any query exists. **output:** not one comparison, but many — every query token gets matched against every document token, and only the *best* match per query token counts toward the final score.
 
-`MaxSim(doc B) = 0.96 + 0.74 = 1.70`
-
-late interaction ranks **doc A (2.00) clearly above doc B (1.70)** — a ~18% gap. notice both documents match the query token `capitale` almost equally well — both literally contain that word — but `Italia` only finds a near-perfect match in doc A; in doc B the best it can do is `Paese` ("country"), related but clearly weaker (0.74, not 1.00). a cross-encoder catches this same distinction too, just not without rerunning the full model per document at query time. the single pooled vector *also* got the ranking right in this toy example (0.91 vs. 0.59) — but only because the one distinguishing word is still 1 of just 4 tokens, so pooling can't fully bury it yet. MaxSim's advantage isn't that it wins this particular tiny example; it's that its per-token maximum, `Italia` → `Italia` at 1.00, is completely unaffected by document length — add another 500 unrelated words to doc A and MaxSim still finds that same 1.00 match, while the pooled vector keeps diluting further with every token added.
+both documents match `capitale` almost perfectly, since both literally contain that exact word — MaxSim doesn't get fooled or blurred by that, it just correctly scores it as a strong match on both sides. the ranking is decided by the *other* query token: `Italia` finds a near-perfect match inside doc A (the word "Italia" itself), but in doc B the best it can do is `Paese` ("country") — related, clearly weaker. that's the level of detail a single pooled vector throws away, and that a cross-encoder would also catch — but only by paying the full per-document cost that late interaction avoids by precomputing document tokens once, offline.
 
 </details>
 
