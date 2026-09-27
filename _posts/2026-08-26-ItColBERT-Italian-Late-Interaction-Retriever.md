@@ -11,7 +11,7 @@ tags: [NLP, Information Retrieval, ColBERT, PyLate, Hugging Face, RAG]
 
 to my knowledge, there was no **monolingual Italian ColBERT** out there — plenty of multilingual late-interaction models include Italian among dozens of languages, and plenty of strong Italian dense embedders exist, but nothing combined the two: an Italian-*specialized* model that keeps token-level matching. that gap is what made me want to try building one myself.
 
-the result is **ItColBERT**, trained end to end on a single RTX 3090 at home, with every design decision, failed experiment and dead end documented along the way rather than hidden.
+the result is **ItColBERT**, trained end to end on a single RTX 3090 at home, with every design decision, failed experiment and dead end documented along the way rather than hidden. the write-up is also a paper: **[ItColBERT: An Italian-Specialised Late-Interaction Retriever](https://arxiv.org/abs/2609.26856)** ([arXiv:2609.26856](https://arxiv.org/abs/2609.26856)).
 
 ## 🧩 What is Late Interaction?
 
@@ -258,6 +258,7 @@ no multi-GPU, no cloud compute. that ceiling shaped quite a few decisions along 
 
 ## 🔗 Links
 
+- 📄 Paper: **[ItColBERT: An Italian-Specialised Late-Interaction Retriever](https://arxiv.org/abs/2609.26856)** — Nello, E. (2026). arXiv:2609.26856. [doi:10.48550/arXiv.2609.26856](https://doi.org/10.48550/arXiv.2609.26856)
 - 🐙 GitHub repository: **[github.com/enricollen/it-colbert](https://github.com/enricollen/it-colbert)** — training code, benchmark suite, and the full development history (if you find it useful, a star ⭐ is always appreciated)
 - 🤗 Model on Hugging Face: **[huggingface.co/enricollen/ItColBERT](https://huggingface.co/enricollen/ItColBERT)** — ready-to-use weights, model card, and usage examples
 
