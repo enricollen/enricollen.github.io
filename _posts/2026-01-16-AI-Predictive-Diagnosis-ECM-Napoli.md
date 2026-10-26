@@ -3,6 +3,7 @@ title: 🎤 Speaking at ECM Naples - AI for Predictive Diagnosis
 date: 2026-01-16 18:00 +0100
 categories: [Talks, AI in Medicine]
 tags: [AI, Rare Diseases, Early Diagnosis, Public Speaking, ECM]
+image: /assets/img/posts/ecm_napoli/ecm_napoli1.jpg
 ---
 
 on january 16th i had the opportunity to speak in Naples at an ECM (continuing medical education) course dedicated to the screening of **Fabry Disease**, focusing on the role of artificial intelligence in supporting early diagnosis.
@@ -11,13 +12,9 @@ a multidisciplinary event bringing together nephrologists, biologists, nurses, a
 
 the event was organized by [Italian Medical Research](https://www.italianmedicalresearch.it/) and [Helaglobe](https://www.helaglobe.com/).
 
-<div align="center">
-  <img src="../assets/img/posts/ecm_napoli/ecm_napoli1.jpg" alt="ecm_napoli" width="350">
-</div>
-
 ---
 
-# 🎯 The Talk
+## 🎯 The Talk
 
 **"AI for Predictive Diagnosis"**
 
@@ -29,20 +26,20 @@ the talk also touched on the challenge of **systematic screening in dialysis pop
 
 ---
 
-# 🗂️ What We Covered
+## 🗂️ What We Covered
 
-## the screening gap
+### the screening gap
 why Fabry Disease is still largely missed in clinical practice, and the organizational — not just clinical — barriers that prevent timely diagnosis.
 
-## AI-driven predictive models
+### AI-driven predictive models
 how machine learning algorithms can be integrated into existing workflows to identify at-risk patients from routine clinical data, enabling proactive rather than reactive diagnosis.
 
-## connecting the ecosystem
+### connecting the ecosystem
 territorial dialysis centers and reference centers working together — because the challenge is as much about coordination and data sharing as it is about technology.
 
 ---
 
-# 💡 Key Takeaways
+## 💡 Key Takeaways
 
 - **early diagnosis saves lives** — in rare diseases like Fabry, delay directly impacts treatment outcomes
 - **AI doesn't replace the clinician** — it enhances their ability to catch what might otherwise be missed
@@ -51,7 +48,7 @@ territorial dialysis centers and reference centers working together — because 
 
 ---
 
-# 🙏 Thanks
+## 🙏 Thanks
 
 thanks to the whole team — **Davide Cafiero**, **Tania Vuoso**, **Cinzia Diana** — for making this event happen.
 
@@ -59,7 +56,7 @@ it was a meaningful and inspiring day, and a strong reminder of why this kind of
 
 ---
 
-## 📸 Photos
+### 📸 Photos
 
 <div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: flex-start;">
   <img src="../assets/img/posts/ecm_napoli/ecm_napoli1.jpg" alt="ecm_napoli" style="width: 220px; height: 285px; object-fit: cover;">

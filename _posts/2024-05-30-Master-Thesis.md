@@ -12,13 +12,13 @@ My Master Thesis, conducted in collaboration with ISTI-CNR of Pisa, focused on t
 My thesis aims to bridge this gap by proposing a new type of analysis that combines the detection of deepfakes and fake news.
 It is publicly available [HERE](https://etd.adm.unipi.it/t/etd-05082024-174758/).
 
-# Objectives: 🎯
+## Objectives: 🎯
 The primary aims of my thesis were to:
 * Propose an innovative analysis about the effectiveness of deepfake detection in the context of fake news.
 * Create a brand new dataset that integrates both deepfake images and fake news text, named DeepFakeNews.
 * Develop a multimodal deepfake detector, robust towards fake news context.
 
-# Contributions: 🔥
+## Contributions: 🔥
 * Innovative Analysis: Proposed an innovative analysis to evaluate the effectiveness of deepfake detection tools when used in conjunction with fake news.
 * DeepFakeNews Dataset: Introduced a new public dataset designed to support the detection of both deepfakes and fake news. This dataset, is an expansion of a pre-existing fake news detection dataset called [Fakeddit](https://fakeddit.netlify.app/). 
 
@@ -29,17 +29,17 @@ DeepFakeNews is publicly available on Zenodo ([HERE](https://zenodo.org/records/
 
 * Multimodal Deepfake Detection Model: Proposed a robust multimodal detection model combining ResNet50 for image analysis and BERT for text analysis, achieving an impressive accuracy of 93.3%.
 
-# Dataset Overview: 📊
+## Dataset Overview: 📊
 The DeepFakeNews dataset was made to address modern misinformation challenges, that include both visual and textual deception.
 
-## Applications: 🔍
+### Applications: 🔍
 This dataset is ideal for:
 - Standard deepfake detection.
 - Fake news detection.
 - Combined multimodal analyses of visual and textual content, providing a robust framework for evaluating detection systems.
 
-## Impact: 📈
+### Impact: 📈
 Since its release, the DeepFakeNews dataset has been downloaded nearly 100 times, serving as a crucial benchmark for ongoing research in digital misinformation detection.
 
-## 🔗 GitHub Repository
+### 🔗 GitHub Repository
 Visit the thesis repository [here](https://github.com/enricollen/DeepfakeDetection) for accessing the codebase and models.

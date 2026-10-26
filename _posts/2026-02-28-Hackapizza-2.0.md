@@ -3,6 +3,7 @@ title: 🏆 Hackapizza 2.0 - Winning an AI Agents Hackathon
 date: 2026-02-28 18:00 +0200
 categories: [Hackaton, AI Agents]
 tags: [AI Agents, Multi-Agent Systems, Hackathon, datapizza]
+image: /assets/img/posts/hackapizza2/6.jpeg
 ---
 
 what a weekend!! on february 28th and march 1st, our team **"Cavalli al trotto 🐎"** won 🏆 [Hackapizza 2.0: Agent Edition](https://hackathon.datapizza.com/), the hackathon organized by [Datapizza](https://datapizza.tech/) in Milan — one of the most intense and stimulating competitions i've ever taken part in.
@@ -11,11 +12,8 @@ what a weekend!! on february 28th and march 1st, our team **"Cavalli al trotto �
 
 the team was composed of [Giacomo Pacini](https://github.com/Ruggero1912), [Dario Cioni](https://github.com/ciodar), [Alessio Chen](https://github.com/AlessioChen) and me.
 
-<div align="center">
-  <img src="../assets/img/posts/hackapizza2/6.jpeg" alt="hackapizza2" width="600" height="400">
-</div>
 
-# 🍕 The Challenge
+## 🍕 The Challenge
 
 the hackathon track was "galactic" themed, building on the first edition: participants had to build a **fully autonomous virtual restaurant** — no human intervention allowed.
 
@@ -31,11 +29,11 @@ the competition used the **[datapizza-ai](https://docs.datapizza.ai/)** open-sou
 
 ---
 
-# 🤖 System Architecture
+## 🤖 System Architecture
 
 we built a **real-time multi-agent system** that simulates running a restaurant in an alien universe. five specialized AI agents compete against other restaurants to maximize profit through intelligent decision-making.
 
-## Agents
+### Agents
 
 | agent | phase | purpose |
 |-------|-------|---------|
@@ -45,7 +43,7 @@ we built a **real-time multi-agent system** that simulates running a restaurant 
 | **service agent** | serving | match client order to a safe dish |
 | **memory agent** | stopped | generate turn summaries and lessons learned |
 
-## Turn Structure
+### Turn Structure
 
 each game turn progresses through five sequential phases:
 
@@ -61,7 +59,7 @@ each game turn progresses through five sequential phases:
 
 ---
 
-# ⚙️ How It Works
+## ⚙️ How It Works
 
 the system is entirely **event-driven**: an SSE loop is the heartbeat, and every game event triggers a handler that updates in-memory state and schedules background work without blocking the loop.
 
@@ -80,7 +78,7 @@ game server (SSE)
                                         └──────────────────────────────────────────┘
 ```
 
-## Per-Client Serving Flow
+### Per-Client Serving Flow
 
 when a `client_spawned` event arrives, the orchestrator processes the client in a dedicated async task:
 
@@ -107,12 +105,12 @@ if any step fails, the orchestrator falls back to a deterministic dish picker th
 
 ---
 
-# 🧩 Key Architectural Decisions
+## 🧩 Key Architectural Decisions
 
-## Long-Term Memory
+### Long-Term Memory
 one of the main challenges of the hackathon was managing **long-term memory** across game turns. the memory agent generates structured turn summaries — lessons learned, bidding outcomes, competitor behavior — that are persisted to MySQL and fed back into the next turn's planning.
 
-## State Persistence
+### State Persistence
 every decision and tool call is persisted to MySQL in real time:
 
 ```
@@ -128,12 +126,12 @@ game_phase_changed ─┐
 client_spawned      ─┘──► sse_events table
 ```
 
-## Deterministic Fallbacks
+### Deterministic Fallbacks
 every AI agent has a deterministic fallback path — this was critical to avoid losing turns when LLM calls timed out under high concurrency during the competition.
 
 ---
 
-# 📁 Project Structure
+## 📁 Project Structure
 
 ```plaintext
 hackapizza2.0/
@@ -152,7 +150,7 @@ hackapizza2.0/
 
 ---
 
-# 🛠️ Tech Stack
+## 🛠️ Tech Stack
 
 - **language:** Python 3.12+ (async/await)
 - **AI framework:** [datapizza-ai](https://docs.datapizza.ai/)
@@ -163,7 +161,7 @@ hackapizza2.0/
 
 ---
 
-# 🎬 Conclusion
+## 🎬 Conclusion
 
 this was one of the most technically demanding competitions i've experienced. the combination of multi-agent orchestration, real-time event-driven architecture, complex game theory decisions and very tight time constraints made every hour count.
 
@@ -171,10 +169,10 @@ beyond the technical side, it was great to meet and exchange ideas with other AI
 
 a special thanks to the entire **Datapizza** team for organizing such an impeccable event, and to the jury: Simone Rizzo, Enrico Mensa, Giuseppe Gullo, and Giacomo Ciarlini.
 
-## 🔗 GitHub Repository
+### 🔗 GitHub Repository
 visit the project repository [here](https://github.com/AlessioChen/HACKAPIZZA-2.0) for accessing the full codebase (if you enjoyed this content, please consider leaving a star ⭐).
 
-## 📸 Photos
+### 📸 Photos
 
 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
   <img src="../assets/img/posts/hackapizza2/1.jpeg" alt="hackapizza2" style="width: 300px; height: 200px; object-fit: cover;">

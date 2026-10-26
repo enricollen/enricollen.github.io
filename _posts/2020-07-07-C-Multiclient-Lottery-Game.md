@@ -3,6 +3,7 @@ title: 🎲 C-Multiclient Lottery Game
 date: 2020-07-07 21:30 +0200
 categories: [Bachelor Degree Projects, C-Multiclient Lottery Game]
 tags: [C, game, networks]
+image: /assets/img/posts/multiclient_lottery_game/1.png
 ---
 This project consists in a C implementation of the classic lottery game. Developed as a simple multi-client shell application, it allows users to engage in lottery games from their command-line interface.
 The game operates through a server-client model, supporting multiple connections simultaneously, which makes it a great tool for learning about network programming and concurrency in C.

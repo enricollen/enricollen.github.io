@@ -3,13 +3,10 @@ title: 📄 Poster Presentation at Spoke 9 Congress - AI-Augmented Delphi
 date: 2025-11-04 18:00 +0100
 categories: [Talks, AI Research]
 tags: [AI Agents, LLM, Public Speaking, Digital Health]
+image: /assets/img/posts/ai_augmented_delphi_milan/ai-augmented-delphi1.jpg
 ---
 
 our work **"AI-Augmented Delphi: Design and Evaluation of a Human-Aligned LLM Workflow for Accelerating Consensus"** was selected for a **poster presentation** at the [Spoke 9 Congress](https://www.rna-genetherapy.eu/spokes/spoke-9/) — *"The Pharmacology of RNA Drugs: an Unmet Pharmacological Need Tackled by the National Centre of RNA Drugs"*, held in Milan on November 4–5, 2025 at the beautiful Assolombarda center.
-
-<div align="center">
-  <img src="../assets/img/posts/ai_augmented_delphi_milan/ai-augmented-delphi1.jpg" alt="ai-augmented-delphi" width="380">
-</div>
 
 ---
 

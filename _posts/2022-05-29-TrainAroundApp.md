@@ -3,6 +3,7 @@ title: 🏃‍♂️⌚ TrainAround - Monitoring Athletes' Workout Using a BLE S
 date: 2022-05-29 21:30 +0200
 categories: [Master Degree Projects, TrainAround - Monitoring Athletes' Workout Using a BLE Star Topology Network]
 tags: [Android, Wearable Devices, BLE, Mobile App]
+image: /assets/img/posts/train_around/user_interface.jpg
 ---
 <img src="../assets/img/posts/train_around/user_interface.jpg" alt="user_interface" width="400" height="400">
 

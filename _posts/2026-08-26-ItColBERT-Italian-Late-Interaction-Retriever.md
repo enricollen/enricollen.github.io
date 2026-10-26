@@ -3,11 +3,8 @@ title: 🇮🇹🔍 ItColBERT - An Italian Late-Interaction Retriever
 date: 2026-08-26 10:00 +0200
 categories: [Personal Projects, ItColBERT - Italian Late-Interaction Retriever]
 tags: [NLP, Information Retrieval, ColBERT, PyLate, Hugging Face, RAG]
+image: /assets/img/posts/it_colbert/banner.jpg
 ---
-
-<div align="center">
-  <img src="../assets/img/posts/it_colbert/banner.jpg" alt="itcolbert_banner" style="width:100%; max-width:800px;">
-</div>
 
 to my knowledge, there was no **monolingual Italian ColBERT** out there — plenty of multilingual late-interaction models include Italian among dozens of languages, and plenty of strong Italian dense embedders exist, but nothing combined the two: an Italian-*specialized* model that keeps token-level matching. that gap is what made me want to try building one myself.
 

@@ -3,22 +3,20 @@ title: 🏠🎙️ Replacing Alexa - Raspberry PI custom voice assistant
 date: 2025-12-15 14:00 +0200  
 categories: [Personal Projects, AI Agents]  
 tags: [AI Agents, Voice Assistant, Raspberry Pi, IoT]  
+image: /assets/img/posts/pamirca_voice_assistant/pamirca.jpg
 ---
-<div align="center">
-  <img src="../assets/img/posts/pamirca_voice_assistant/pamirca.jpg" alt="cover_image" width="600" height="350">
-</div>
 
-After building my [fastrtc voice agent](https://enricollen.github.io/posts/AI-Voice-Agent/) powered by **[llamaindex](https://www.llamaindex.ai/)** for agent orchestration, i realized i wanted something more practical for everyday use at home. i wanted to replace my alexa device with a fully customizable, privacy-focused voice assistant that could run locally on my raspberry pi.
+After building my [fastrtc voice agent](/posts/AI-Voice-Agent/) powered by **[llamaindex](https://www.llamaindex.ai/)** for agent orchestration, i realized i wanted something more practical for everyday use at home. i wanted to replace my alexa device with a fully customizable, privacy-focused voice assistant that could run locally on my raspberry pi.
 
 the main limitation of the original web-based version was that it required opening a browser and clicking buttons to interact. for a true hands-free experience at home, i needed **wake word detection** and **direct audio i/o** without any ui dependency.
 
-# 📺 Video Demo
+## 📺 Video Demo
 
 to see pamirca in action, check out this demo video showcasing the wake word detection, voice interaction, and tool usage:
 
 [![Raspberry Pi Voice Assistant Demo](https://img.youtube.com/vi/x3XwKcdNpGw/0.jpg)](https://www.youtube.com/watch?v=x3XwKcdNpGw)
 
-# 🎯 Project Goals
+## 🎯 Project Goals
 
 the goal was simple but ambitious: create a fully functional voice assistant that:
 - runs on a raspberry pi 4 (4gb ram)
@@ -27,7 +25,7 @@ the goal was simple but ambitious: create a fully functional voice assistant tha
 - handles both microphone input and speaker output through a single usb audio device
 - maintains all the flexibility of the original project (multiple stt/tts/llm providers)
 
-# 🔄 From Web UI to Wake Word Detection
+## 🔄 From Web UI to Wake Word Detection
 
 the main differences from my previous fastrtc voice agent are:
 
@@ -40,17 +38,17 @@ the main differences from my previous fastrtc voice agent are:
 | use case | development/testing | always-on home assistant |
 | conversation flow | manual start/stop | automatic timeout handling |
 
-# ⚙️ How It Works
+## ⚙️ How It Works
 
 the system operates in two distinct modes:
 
-## 1. **wake word listening mode** (idle state)
+### 1. **wake word listening mode** (idle state)
 - continuously listens for the wake word "hey pamirca"
 - uses efficient hotword detection model (eff-word-net)
 - minimal cpu usage while waiting
 - instant activation when wake word detected
 
-## 2. **conversation mode** (active state)
+### 2. **conversation mode** (active state)
 - activates automatically when wake word is detected
 - plays greeting ("dimmi" - italian for "tell me")
 - records voice input until silence is detected
@@ -61,7 +59,7 @@ the system operates in two distinct modes:
 - continues listening for follow-up questions
 - automatically exits after timeout or exit phrase
 
-## Conversation Flow Example
+### Conversation Flow Example
 ```
 [system boots] → [listening for wake word]
   ↓
@@ -80,16 +78,16 @@ the system operates in two distinct modes:
 [back to wake word listening mode]
 ```
 
-# Key Components
+## Key Components
 
-### 1. **wake word detector**
+#### 1. **wake word detector**
 - uses **eff-word-net** library with resnet50 model
 - custom wake word trained reference file
 - configurable detection threshold (default 0.65)
 - handles microphone stream management
 - releases audio device when conversation starts
 
-### 2. **direct audio conversation handler**
+#### 2. **direct audio conversation handler**
 - manages pyaudio streams for input/output
 - implements voice activity detection (vad)
 - records until silence detected
@@ -97,11 +95,11 @@ the system operates in two distinct modes:
 - handles conversation timeout automatically
 - supports exit phrases ("goodbye", "arrivederci", etc.)
 
-### 3. **speech services** (unchanged from original)
+#### 3. **speech services** (unchanged from original)
 - **stt providers**: elevenlabs, groq, openai, whisper (local)
 - **tts providers**: elevenlabs, kokoro (local)
 
-### 4. **llm agent framework** (unchanged from original)
+#### 4. **llm agent framework** (unchanged from original)
 - **[llamaindex](https://www.llamaindex.ai/)** react agent for orchestration
 - supports multiple llm providers via **[litellm](https://www.litellm.ai/)**:
   - cloud: openai, google gemini, groq, openrouter
@@ -109,33 +107,33 @@ the system operates in two distinct modes:
 - tool calling capabilities (weather, time, lights, mcp tools, search)
 - conversation memory management with configurable history limits
 
-### 5. **audio device management**
+#### 5. **audio device management**
 - automatic usb audio device detection
 - prioritizes pulseaudio for device sharing
 - automatic volume adjustment
 - uses `aplay` for reliable audio playback on raspberry pi
 
-# 🛠️ Raspberry Pi Optimizations
+## 🛠️ Raspberry Pi Optimizations
 
 running on a raspberry pi 4 required some optimizations:
 
-## Hardware Considerations
+### Hardware Considerations
 - **usb audio device**: combined microphone + speaker
 - **cooling**: recommended for sustained operation
 - **power supply**: 5v 3a minimum for stability
 
 
-# 🎤 Wake Word Detection
+## 🎤 Wake Word Detection
 
 the wake word system uses **eff-word-net**, a lightweight neural network specifically designed for hotword detection on resource-constrained devices.
 
-## Creating Custom Wake Word
+### Creating Custom Wake Word
 1. record 3-5 samples of your chosen wake word
 2. generate reference embeddings using eff-word-net tools
 3. save as json reference file
 4. configure threshold for sensitivity vs false positives
 
-## My Configuration
+### My Configuration
 ```python
 # wake word settings
 wake_word = "hey_pamirca"
@@ -154,28 +152,28 @@ output_buffer_size = 5000  # 312.5ms @ 16khz
 
 the wake word threshold of 0.65 provides a good balance: sensitive enough to detect "hey pamirca" reliably, but not so sensitive that it triggers on similar-sounding phrases.
 
-# 🔊 Audio Setup
+## 🔊 Audio Setup
 
 one of the biggest challenges was getting reliable audio i/o on raspberry pi.
 
-## Audio Playback Solution
+### Audio Playback Solution
 initially tried pyaudio for playback, but faced buffer underrun issues on raspberry pi. switched to **aplay** command-line tool:
 - writes audio to temporary wav file
 - uses system's aplay for reliable playback
 - automatic cleanup after playback
 - supports any sample rate
 
-## Microphone Muting
+### Microphone Muting
 during ai response playback, the microphone is muted to prevent:
 - echo/feedback loops
 - ai responding to its own voice
 - false wake word triggers
 
-# 🤖 Agent Capabilities
+## 🤖 Agent Capabilities
 
 the agent maintains all capabilities from the original project, powered by llamaindex's react agent framework.
 
-## Pamirca's Personality
+### Pamirca's Personality
 
 pamirca is configured with a friendly and helpful personality through a system prompt defined in `config/prompts.yaml`:
 
@@ -187,7 +185,7 @@ pamirca is configured with a friendly and helpful personality through a system p
 
 the system prompt explicitly instructs pamirca to **always** use appropriate tools rather than answering from its training data, ensuring responses are accurate and up-to-date.
 
-## Available Tools
+### Available Tools
 - **weather tool**: get current weather and forecasts for any city
 - **time tool**: provide current time and date
 - **light control tool**: control smart lights via webhook
@@ -199,29 +197,29 @@ the system prompt explicitly instructs pamirca to **always** use appropriate too
   - **serie a news**: italian football/soccer news (via fastmcp)
   - **surf forecast**: wave and surf conditions (via fastmcp)
 
-## 🏠 Home Automation Control
+### 🏠 Home Automation Control
 
 pamirca can control smart devices in different zones of the home through a webhook integration with n8n. the light control system supports different home zones.
 
-### Light Control Commands
+#### Light Control Commands
 - **turn on**: "accendi le luci della sala" (turn on living room lights)
 - **turn off**: "spegni le luci della cucina" (turn off kitchen lights)
 - **specific zones**: works with any of the four configured zones
 
 the light control tool sends commands to an n8n webhook that interfaces with your smart home system, making it easy to integrate with any home automation platform.
 
-## 🌐 MCP Integration for Extended Features
+### 🌐 MCP Integration for Extended Features
 
 beyond home automation, pamirca leverages **model context protocol (mcp)** via **fastmcp** servers to provide additional capabilities:
 
-### FastMCP-Powered Tools
+#### FastMCP-Powered Tools
 - **news summary**: real-time general news updates from multiple sources
 - **serie a news**: dedicated italian football/soccer news feed
 - **surf forecast**: wave height, wind conditions, and surf forecasts for any coastal city
 
 these mcp tools run on fastmcp cloud servers, providing reliable real-time data without local infrastructure requirements. the mcp architecture makes it easy to add new capabilities by simply connecting to additional fastmcp servers.
 
-## Example Interactions
+### Example Interactions
 ```
 user: "hey pamirca"
 assistant: "dimmi"
@@ -252,27 +250,27 @@ assistant: "arrivederci!"
 [returns to wake word listening]
 ```
 
-# 🎯 Use Cases
+## 🎯 Use Cases
 It's a perfect alexa replacement with more control and privacy:
 
-## 1. **smart home control**
+### 1. **smart home control**
 - voice-activated lights: "accendi le luci della sala" (turn on living room lights)
 - webhook integration with n8n for extensibility
 - natural language commands in italian
 
-## 2. **customizable tools**
+### 2. **customizable tools**
 - weather forecasts
 - web searches
 - general knowledge questions
 - contextual follow-up questions
 
-## 3. **development platform**
+### 3. **development platform**
 - different stt/tts providers
 - experiment with different llms
 - develop custom tools and integrations
 - prototype voice interfaces
 
-# 🎬 Conclusion
+## 🎬 Conclusion
 
 transforming a web-based voice agent into a raspberry pi-powered home assistant was an incredibly rewarding project. it demonstrates that with the right tools and optimizations, you can build a privacy-focused, fully customizable voice assistant that rivals commercial solutions.
 

@@ -1,0 +1,116 @@
+<!-- Custom metadata: rich-result structured data + crawler hints -->
+
+<!-- Let search engines use large image previews (we always set og:image) -->
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+{%- comment -%}
+  Person structured data, emitted on the home page and the About tab only, so the
+  entity is declared once per crawl path rather than on all 160+ URLs.
+  jekyll-seo-tag already emits the WebSite / BlogPosting entities, so this only
+  adds what it does not cover.
+{%- endcomment -%}
+
+{%- assign is_about = false -%}
+{%- if page.collection == 'tabs' and page.title == 'About' -%}
+  {%- assign is_about = true -%}
+{%- endif -%}
+
+{%- if page.layout == 'home' or is_about -%}
+  {%- capture person -%}
+  {
+    "@type": "Person",
+    "@id": {{ '/#person' | absolute_url | jsonify }},
+    "name": {{ site.social.name | jsonify }},
+    "url": {{ '/' | absolute_url | jsonify }},
+    "image": {{ '/assets/img/me.jpg' | absolute_url | jsonify }},
+    "jobTitle": "AI Engineer",
+    "description": "AI Engineer based in Pisa, Italy, working on AI agents, large language models, computer vision and information retrieval.",
+    "email": {{ site.social.email | prepend: 'mailto:' | jsonify }},
+    "knowsLanguage": ["en", "it"],
+    "knowsAbout": [
+      "Artificial Intelligence",
+      "AI Agents",
+      "Large Language Models",
+      "Retrieval-Augmented Generation",
+      "Information Retrieval",
+      "Computer Vision",
+      "Machine Learning",
+      "Data Engineering"
+    ],
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "University of Pisa",
+      "url": "https://www.unipi.it/"
+    },
+    "worksFor": {
+      "@type": "Organization",
+      "name": "ExtraRed",
+      "url": "https://extrared.it/"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Pisa",
+      "addressCountry": "IT"
+    }
+    {%- if site.social.links.size > 0 -%}
+    ,"sameAs": [
+      {%- for link in site.social.links -%}
+        {{ link | jsonify }}{%- unless forloop.last -%},{%- endunless -%}
+      {%- endfor -%}
+    ]
+    {%- endif -%}
+  }
+  {%- endcapture -%}
+
+  {%- capture graph -%}
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {%- if is_about -%}
+      {
+        "@type": "ProfilePage",
+        "url": {{ page.url | absolute_url | jsonify }},
+        "name": {{ page.title | jsonify }},
+        "inLanguage": {{ site.lang | jsonify }},
+        "mainEntity": { "@id": {{ '/#person' | absolute_url | jsonify }} }
+      },
+      {%- endif -%}
+      {{ person }}
+    ]
+  }
+  {%- endcapture -%}
+  <script type="application/ld+json">{{ graph | strip_newlines | replace: '  ', '' }}</script>
+{%- endif -%}
+
+{%- comment -%} Breadcrumbs for posts, so results can show the category path. {%- endcomment -%}
+{%- if page.layout == 'post' and page.categories.size > 0 -%}
+  {%- capture crumbs -%}
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": {{ '/' | absolute_url | jsonify }}
+      },
+      {%- for cat in page.categories -%}
+      {
+        "@type": "ListItem",
+        "position": {{ forloop.index | plus: 1 }},
+        "name": {{ cat | jsonify }},
+        "item": {{ cat | slugify | prepend: '/categories/' | append: '/' | absolute_url | jsonify }}
+      },
+      {%- endfor -%}
+      {
+        "@type": "ListItem",
+        "position": {{ page.categories.size | plus: 2 }},
+        "name": {{ page.title | jsonify }},
+        "item": {{ page.url | absolute_url | jsonify }}
+      }
+    ]
+  }
+  {%- endcapture -%}
+  <script type="application/ld+json">{{ crumbs | strip_newlines | replace: '  ', '' }}</script>
+{%- endif -%}

@@ -2,7 +2,8 @@
 title: 🚗💬📢 TravelTales - Personalized In-Car Audio News Service
 date: 2024-01-15 21:00 +0200
 categories: [Master Degree Projects, TravelTales - Personalized In-Car Audio News Service]
-tags: [automotive, TTS, information retrieval, face recognition, voice recognition]
+tags: [automotive, TTS, Information Retrieval, face recognition, voice recognition]
+image: /assets/img/posts/travel_tales/travel_tales_logo.jpg
 ---
 <img src="../assets/img/posts/travel_tales/travel_tales_logo.jpg" alt="data_visualization" width="200" height="200">
 

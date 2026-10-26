@@ -3,6 +3,7 @@ title: 🚲 Bike Rental Demand Prediction
 date: 2022-07-22 21:30 +0200
 categories: [Master Degree Projects, Bike Rental Demand Prediction]
 tags: [machine learning, random forest, MLP, time series]
+image: /assets/img/posts/bike_rental_prediction/predictions.jpg
 ---
 🔍 Retailing and AI-based logistics optimizations.
 

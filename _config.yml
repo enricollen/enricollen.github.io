@@ -9,6 +9,8 @@ theme: jekyll-theme-chirpy
 lang: en
 
 # Change to your timezone › https://kevinnovak.github.io/Time-Zone-Picker
+# NOTE: leave empty unless `tzinfo` + `tzinfo-data` are added to the Gemfile.
+# Every post already carries an explicit UTC offset in its `date:` field.
 timezone:
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
@@ -19,7 +21,8 @@ title: Enrico Nello # the main title
 tagline: AI Engineer & Enthusiast # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
-  A minimal, responsive and feature-rich Jekyll theme for technical writing.
+  Portfolio and technical blog of Enrico Nello, AI Engineer — projects, notes and
+  talks on AI agents, LLMs, computer vision and information retrieval.
 
 # Fill in the protocol & hostname for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
@@ -27,6 +30,9 @@ url: "https://enricollen.com"
 
 github:
   username: enricollen # change to your github username
+
+# Used by jekyll-seo-tag for the `author` field of the article structured data
+author: Enrico Nello
 
 #twitter:
   #username: twitter_username # change to your twitter username
@@ -100,7 +106,7 @@ avatar: assets/img/me.jpg
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
-social_preview_image: # string, local or CORS resources
+social_preview_image: /assets/img/og-card.png # string, local or CORS resources
 
 # boolean type, the global switch for TOC in posts.
 toc: true

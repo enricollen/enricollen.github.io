@@ -3,6 +3,7 @@ title: 💹📈 Crypto Predictor - AI-Based Cryptocurrency Trading Strategy
 date: 2022-04-12 21:30 +0200
 categories: [Master Degree Projects, Crypto Predictor - AI-Based Cryptocurrency Trading Strategy]
 tags: [machine learning, random forest, K-Nearest meighbors, Logistic Regression, Gaussian Naïve Bayes, AdaBoost, time series]
+image: /assets/img/posts/crypto_predictor/overview_architecture.jpg
 ---
 This project leverages machine learning to develop a strategy for cryptocurrency trading. The core objective is to create a model that predicts whether the price of a cryptocurrency will increase, decrease, or remain stable in the next market moment (next days). This is achieved by collecting historical price data and applying machine learning techniques to make predictions based on these trends.
 

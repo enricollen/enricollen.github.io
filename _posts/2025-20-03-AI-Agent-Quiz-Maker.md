@@ -3,6 +3,7 @@ title: 🧠 AI Agents - Quiz Maker with OpenAI Agent SDK
 date: 2025-03-28 10:00 +0200  
 categories: [Personal Projects, AI Agents]  
 tags: [AI Agents]  
+image: /assets/img/posts/quiz_maker/quiz_maker_architecture.jpg
 ---
 Recently OpenAI has released their [Agent SDK](https://openai.github.io/openai-agents-python/), so i decided to explor its potential to build something practical for education/learning porpouse.
 

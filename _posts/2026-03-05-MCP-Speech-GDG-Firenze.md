@@ -3,6 +3,7 @@ title: 🎤 Speaking at GDG Firenze - Model Context Protocol
 date: 2026-03-05 18:45 +0100
 categories: [Talks, MCP]
 tags: [MCP, AI Agents, Multi-Agent Systems, Public Speaking, GDG]
+image: /assets/img/posts/gdg_mcp_speech/2.jpeg
 ---
 
 what an incredible evening!! on march 5th i had the pleasure of speaking at the [Google Developer Group Firenze](https://gdg.community.dev/gdg-firenze/) meetup, talking about the **Model Context Protocol (MCP)** in front of a packed room at [42 Firenze](https://42firenze.it/).
@@ -10,12 +11,10 @@ what an incredible evening!! on march 5th i had the pleasure of speaking at the 
 <div align="center">👉 <a href="https://gdg.community.dev/events/details/google-gdg-firenze-presents-model-context-protocol-limportanza-della-standardizzazione-nellera-degli-agenti-ai/">OFFICIAL EVENT PAGE</a></div>
 
 the energy in the room, the questions, the conversations that kept going during the networking session after — it was a fantastic reminder of how vibrant and passionate this community is.
-<div align="center">
-  <img src="../assets/img/posts/gdg_mcp_speech/2.jpeg" alt="hackapizza2" width="600" height="500">
-</div>
+
 ---
 
-# 🎯 The Talk
+## 🎯 The Talk
 
 **"Model Context Protocol: l'importanza della standardizzazione nell'era degli agenti AI"**
 
@@ -23,23 +22,23 @@ the core theme of the session was one i feel strongly about: **standardization m
 
 this is exactly why MCP is establishing itself as the de facto standard: a unified protocol that allows AI models and agents to access tools and data in a uniform, secure and interoperable way.
 
-# 🗂️ What We Covered
+## 🗂️ What We Covered
 
 the session was structured to move progressively from theory to practice:
 
-## The Current AI Ecosystem
+### The Current AI Ecosystem
 a brief overview of how we got here — the fragmentation problem and the path that led to MCP: what it is, why it was created by Anthropic, and how its architecture works.
 
-## Interacting With MCP Servers
+### Interacting With MCP Servers
 starting from the simplest way to interact with MCP servers: using them directly inside chatbots and IDEs. understanding the basics before diving deeper.
 
-## Building Custom MCP Servers
+### Building Custom MCP Servers
 from consuming servers to building them — how to define and create custom MCP servers designed for specific needs. different deployment strategies were explored:
 - **local execution** for development and testing
 - **cloud deployment** for production use
 - **third-party MCP servers** from the growing ecosystem
 
-## Multi-Agent Orchestration
+### Multi-Agent Orchestration
 the final and most advanced part: building a **multi-agent system** that combines multiple MCP-based tools, showing how agents can collaborate intelligently within complex workflows.
 
 the demo first showed a **hybrid agent** connecting to 4 MCP sources simultaneously — a local recipe server, a remote weather server, a Docker MCP Gateway for YouTube transcription, and a Hugging Face Space for image generation. this immediately exposed a real problem: **tool overload**. too many tools confuse the agent, degrade performance, and make routing unreliable.
@@ -63,7 +62,7 @@ each subagent only has access to its own tools — clean separation of concerns,
 
 ---
 
-# 💡 Key Takeaways
+## 💡 Key Takeaways
 
 - **standardization is not optional** — without it, AI ecosystems fragment into silos
 - **MCP is the universal adapter** for connecting LLMs to tools, databases, APIs and services
@@ -73,7 +72,7 @@ each subagent only has access to its own tools — clean separation of concerns,
 
 ---
 
-# 🔗 Resources
+## 🔗 Resources
 
 all the material from the talk — slides, demo code, and setup instructions — is available on my GitHub:
 
@@ -83,7 +82,7 @@ feel free to use the slides, code, or any other material for your own projects o
 
 ---
 
-## 🎥 Video
+### 🎥 Video
 
 the full recording of the talk is available below — enjoy!
 
@@ -93,7 +92,7 @@ the full recording of the talk is available below — enjoy!
 
 ---
 
-## 📸 Photos
+### 📸 Photos
 
 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
   <img src="../assets/img/posts/gdg_mcp_speech/1.jpeg" alt="gdg_mcp_speech" style="width: 300px; height: 400px; object-fit: cover;">

@@ -3,6 +3,7 @@ title: 🖼️ Simple Image Search Engine Using CLIP
 date: 2024-06-03 21:30 +0200
 categories: [Personal Projects, Simple Image Search Engine Using CLIP]
 tags: [computer vision, search engine]
+image: /assets/img/posts/image_search_engine/clip_embeddings.jpg
 ---
 This project demonstrates a practical application of the ([CLIP](https://arxiv.org/abs/2103.00020)) (Contrastive Language–Image Pre-training) model by OpenAI, used to create embeddings for both images and textual descriptions. This model, in fact, allows to project images and text into the same latent space:
 

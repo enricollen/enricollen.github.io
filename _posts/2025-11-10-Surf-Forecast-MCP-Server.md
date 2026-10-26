@@ -3,6 +3,7 @@ title: 🏄 Surf Forecast MCP Server - Wave Conditions for AI Agents
 date: 2025-11-10 09:53 +0200
 categories: [Personal Projects, MCP Server]
 tags: [MCP, AI Agents, FastMCP, LLM]
+image: /assets/img/posts/mcp_server_surf_forecast/mcp-architecture.webp
 ---
 
 ## What is MCP?

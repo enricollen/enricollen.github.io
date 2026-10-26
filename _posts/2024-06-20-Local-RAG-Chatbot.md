@@ -3,6 +3,7 @@ title: 📚 Local RAG Chat with Documents
 date: 2024-06-20 21:30 +0200
 categories: [Personal Projects, Local RAG Chat with Documents]
 tags: [LLM, RAG, langchain, vector db]
+image: /assets/img/posts/local_rag/rag_pipeline.png
 ---
 In this project, i wanted to recreate a local Retrieval-Augmented Generation (RAG) chatbot that can answer to questions by acquiring information from personal pdf documents.
 ##  What is Retrieval-Augmented Generation (RAG)?

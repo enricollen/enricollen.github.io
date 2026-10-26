@@ -3,6 +3,7 @@ title: 🔢👁️ Real-Time Object Detection and Counting
 date: 2024-06-25 21:30 +0200
 categories: [Personal Projects, Real-Time Object Detection and Counting]
 tags: [YOLO, object detection, computer vision]
+image: /assets/img/posts/object_counting/counting_cars_1.jpg
 ---
 In this project, I aimed to understand how to count objects in computer vision tasks. I decided to delve deeper into this topic as it has numerous applications and is crucial for counting things/objects in videos. The system I developed is able to detects objects and also counts them as they move through the video. Additionally, it saves screenshots of the detected objects along with their timestamps.
 

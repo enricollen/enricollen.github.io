@@ -15,16 +15,16 @@ Its aim was to implement a Smart Supermarket concept to improve the management o
 
 ![SmartShelves](https://github.com/enricollen/IoT_Smart_Supermarket/blob/master/img/smart_shelf.jpg?raw=true)
 
-## 🛒 Smart Shelves [CoAP]
+### 🛒 Smart Shelves [CoAP]
 - **Sensors**: Weight sensors
 - **Actuators**: Price Displays
 
-### ⚖️ Weight Sensors
+#### ⚖️ Weight Sensors
 - **Logic**: Periodically measure weight and update inventory status.
 - **Endpoints**: Expose resources for weight measurement and shelf refill status.
 - **Communication**: Use CoAP for sending data to the collector.
 
-### 💲 Price Displays
+#### 💲 Price Displays
 - **Logic**: Display and update product prices.
 - **Endpoints**: Expose resources for price updates.
 - **Communication**: Use CoAP for receiving price updates from the collector.
@@ -39,16 +39,16 @@ These devices communicate using the **CoAP** (Constrained Application Protocol) 
 
 ![SmartFridges](https://github.com/enricollen/IoT_Smart_Supermarket/blob/master/img/smart_fridge.jpg?raw=true)
 
-## 🥶 Smart Fridges [MQTT]
+### 🥶 Smart Fridges [MQTT]
 - **Sensors**: Temperature sensors
 - **Actuators**: Remote Alarm
 
-### 🌡️ Temperature Sensors
+#### 🌡️ Temperature Sensors
 - **Logic**: Monitor and report the temperature; adjust compressor state.
 - **Endpoints**: Publish temperature data and subscribe to desired temperature settings.
 - **Communication**: Use MQTT for data transmission.
 
-### 🚨 Remote Light Alarms
+#### 🚨 Remote Light Alarms
 - **Logic**: Indicate alarms based on temperature readings.
 - **Endpoints**: Publish alarm states and subscribe to alarm control commands.
 - **Communication**: Use MQTT for receiving commands and updating alarm states.
@@ -59,19 +59,19 @@ These devices use MQTT (Message Queuing Telemetry Transport) for communication a
 
 ---
 
-# 🏗️ System Architecture
+## 🏗️ System Architecture
 ![Architecture](https://github.com/enricollen/IoT_Smart_Supermarket/blob/master/img/architecture.jpg?raw=true)
 We implemented the nodes’ firmware using Contiki-NG as the operating system, and using a simulation environment with Cooja. The nodes that we used to deploy our system on are NRF52840.
 
-## 🗃️ Collector
+### 🗃️ Collector
 The collector, written in Python, manages communication with CoAP and MQTT devices, stores data in a MySQL database, and provides a CLI for user interaction. It also handles node registration, data storage, and command execution.
 ![Collector](https://github.com/enricollen/IoT_Smart_Supermarket/blob/master/img/collector.jpg?raw=true)
 
-## 🗄️ Data Storage
+### 🗄️ Data Storage
 Data from the IoT devices is stored in a MySQL database by the Collector.
 
-### 📊 Data Visualization
+#### 📊 Data Visualization
 Data is visualized using Grafana, providing interactive charts and graphs to monitor system performance and inventory status.
 
-## 🔗 GitHub Repository
+### 🔗 GitHub Repository
 Visit the project repository [here](https://github.com/enricollen/IoT_Smart_Supermarket) to access to the codebase, and [here](https://github.com/enricollen/IoT_Smart_Supermarket/blob/master/progetto/Smart_Supermarket_Documentation.pdf) for project documentation.
