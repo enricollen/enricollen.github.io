@@ -100,7 +100,7 @@ To help understand how everything works together, i’ve included a quick demo s
 - **Demo 2**: STT → OpenAI GPT-4o-transcribe | TTS → Elevenlabs | LLM → Gemini 1.5 Flash | Language → Italian
 - **Demo 3 (Fully local setup)**: STT → Whisper Large v3 turbo | TTS → Kokoro TTS | LLM → Ollama, Qwen 3 8b | Language → English
 
-[![Voice Agent Demo](https://img.youtube.com/vi/fjYv0PuJT7k/0.jpg)](https://www.youtube.com/watch?v=fjYv0PuJT7k)
+[![Voice Agent Demo](/assets/img/posts/fastrtc_voice_agent/yt_fjYv0PuJT7k.jpg)](https://www.youtube.com/watch?v=fjYv0PuJT7k)
 
 ## 📖 Medium Tutorial
 Visit the step-by-step tutorial i wrote in Medium [here](https://medium.com/thedeephub/fastrtc-voice-ai-agent-534aa8dec899) (if you enjoyed this content, please consider clapping the story 👏).

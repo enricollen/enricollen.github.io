@@ -62,16 +62,16 @@ Watch the demo videos below to see TravelTales in action.
 
 1) User registration:
 
-[![YT Video](https://img.youtube.com/vi/PPvsExLQKnY/0.jpg)](https://www.youtube.com/watch?v=PPvsExLQKnY)
+[![YT Video](/assets/img/posts/travel_tales/yt_PPvsExLQKnY.jpg)](https://www.youtube.com/watch?v=PPvsExLQKnY)
 
 2) News Player:
 
-[![YT Video](https://img.youtube.com/vi/2C0YHlqBly8/0.jpg)](https://www.youtube.com/watch?v=2C0YHlqBly8)
+[![YT Video](/assets/img/posts/travel_tales/yt_2C0YHlqBly8.jpg)](https://www.youtube.com/watch?v=2C0YHlqBly8)
 
 3) Data Visualization:
 
-[![YT Video](https://img.youtube.com/vi/DUHmPTPL8uU/0.jpg)](https://www.youtube.com/watch?v=DUHmPTPL8uU)
+[![YT Video](/assets/img/posts/travel_tales/yt_DUHmPTPL8uU.jpg)](https://www.youtube.com/watch?v=DUHmPTPL8uU)
 
 4) Feedback gathering demo with face recognition and explicit user feedback store system:
 
-[![YT Video](https://img.youtube.com/vi/qlnyNr1SLLE/0.jpg)](https://www.youtube.com/watch?v=qlnyNr1SLLE)
+[![YT Video](/assets/img/posts/travel_tales/yt_qlnyNr1SLLE.jpg)](https://www.youtube.com/watch?v=qlnyNr1SLLE)

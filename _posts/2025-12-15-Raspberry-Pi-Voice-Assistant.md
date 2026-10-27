@@ -14,7 +14,7 @@ the main limitation of the original web-based version was that it required openi
 
 to see pamirca in action, check out this demo video showcasing the wake word detection, voice interaction, and tool usage:
 
-[![Raspberry Pi Voice Assistant Demo](https://img.youtube.com/vi/x3XwKcdNpGw/0.jpg)](https://www.youtube.com/watch?v=x3XwKcdNpGw)
+[![Raspberry Pi Voice Assistant Demo](/assets/img/posts/pamirca_voice_assistant/yt_x3XwKcdNpGw.jpg)](https://www.youtube.com/watch?v=x3XwKcdNpGw)
 
 ## 🎯 Project Goals
 

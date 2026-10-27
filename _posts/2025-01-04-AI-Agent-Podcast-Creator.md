@@ -177,13 +177,13 @@ Visit the project repository [here](https://github.com/enricollen/AIAgents/tree/
 
 ## 🎧 Podcast Demo  
 Below there are a couple of demos of the final podcast audio, created in English and Italian respectively:  
-<img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" alt="UK Flag" width="24" height="16">
+<img src="/assets/img/posts/podcast_creator/flag_uk.svg" alt="UK Flag" width="24" height="16">
 <audio controls>
   <source src="../../assets/audio/podcast_creator/podcast_eng.wav" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
 
-<img src="https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg" alt="Italy Flag" width="24" height="16">
+<img src="/assets/img/posts/podcast_creator/flag_italy.svg" alt="Italy Flag" width="24" height="16">
 <audio controls>
   <source src="../../assets/audio/podcast_creator/podcast_ita.wav" type="audio/mpeg">
   Your browser does not support the audio element.

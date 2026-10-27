@@ -3,6 +3,7 @@ title: 🛒 IoT - Smart Supermarket
 date: 2021-09-10 21:30 +0200
 categories: [Master Degree Projects, IoT - Smart Supermarket]
 tags: [IoT, sensors]
+image: /assets/img/posts/iot_smart_supermarket/architecture.jpg
 ---
 This project was originally developed for the course 'Internet of Things' in MSc in Artificial Intelligence & Data Engineering at University of Pisa.
 
@@ -13,7 +14,7 @@ Its aim was to implement a Smart Supermarket concept to improve the management o
 
 ---
 
-![SmartShelves](https://github.com/enricollen/IoT_Smart_Supermarket/blob/master/img/smart_shelf.jpg?raw=true)
+![SmartShelves](/assets/img/posts/iot_smart_supermarket/smart_shelf.jpg)
 
 ### 🛒 Smart Shelves [CoAP]
 - **Sensors**: Weight sensors
@@ -37,7 +38,7 @@ These devices communicate using the **CoAP** (Constrained Application Protocol) 
 
 ---
 
-![SmartFridges](https://github.com/enricollen/IoT_Smart_Supermarket/blob/master/img/smart_fridge.jpg?raw=true)
+![SmartFridges](/assets/img/posts/iot_smart_supermarket/smart_fridge.jpg)
 
 ### 🥶 Smart Fridges [MQTT]
 - **Sensors**: Temperature sensors
@@ -60,12 +61,12 @@ These devices use MQTT (Message Queuing Telemetry Transport) for communication a
 ---
 
 ## 🏗️ System Architecture
-![Architecture](https://github.com/enricollen/IoT_Smart_Supermarket/blob/master/img/architecture.jpg?raw=true)
+![Architecture](/assets/img/posts/iot_smart_supermarket/architecture.jpg)
 We implemented the nodes’ firmware using Contiki-NG as the operating system, and using a simulation environment with Cooja. The nodes that we used to deploy our system on are NRF52840.
 
 ### 🗃️ Collector
 The collector, written in Python, manages communication with CoAP and MQTT devices, stores data in a MySQL database, and provides a CLI for user interaction. It also handles node registration, data storage, and command execution.
-![Collector](https://github.com/enricollen/IoT_Smart_Supermarket/blob/master/img/collector.jpg?raw=true)
+![Collector](/assets/img/posts/iot_smart_supermarket/collector.jpg)
 
 ### 🗄️ Data Storage
 Data from the IoT devices is stored in a MySQL database by the Collector.

@@ -3,6 +3,7 @@ title: 🍽️👁️ Real-Time Food Detection System
 date: 2024-06-11 21:30 +0200
 categories: [Personal Projects, Real-Time Food Detection System]
 tags: [object detection, YOLO, computer vision]
+image: /assets/img/posts/realtime_food_detection/real_example.jpg
 ---
 This project was inspired by the innovative Ikea's restaurant payment method, which implements real-time object detection to determine the price to pay.
 
@@ -10,7 +11,7 @@ I tried to recreate a similar system, developed as a simple web application usin
 
 The price is adjusted in real-time as the webcam detects one or more food items, and the price tag is updated accordingly.
 
-<img src="https://github.com/enricollen/RealTimeFoodDetection/blob/main/screenshots/real_example.jpg?raw=true" alt="interface" width="500" height="550">
+<img src="/assets/img/posts/realtime_food_detection/real_example.jpg" alt="interface" width="500" height="550">
 
 ## 🥗 Menu
 Here is the list of food items that the system can detect along with their corresponding prices:
@@ -54,13 +55,13 @@ This ensures that users can see the price in real-time as they place more items 
 
 ## 📹 Demo Video & Setup
 Watch the demo video below to see the Real-Time Food Detection System in action:
-[![YT Video](https://img.youtube.com/vi/4eRQTrln_ag/0.jpg)](https://www.youtube.com/watch?v=4eRQTrln_ag)
+[![YT Video](/assets/img/posts/realtime_food_detection/yt_4eRQTrln_ag.jpg)](https://www.youtube.com/watch?v=4eRQTrln_ag)
 
 Actual setup during video recording:
 
 <div style="text-align: center;">
-    <img src="https://github.com/enricollen/RealTimeFoodDetection/blob/main/screenshots/setup_1.jpg?raw=true" alt="setup_1" width="300" height="300">
-    <img src="https://github.com/enricollen/RealTimeFoodDetection/blob/main/screenshots/setup_2.jpg?raw=true" alt="setup_2" width="300" height="300">
+    <img src="/assets/img/posts/realtime_food_detection/setup_1.jpg" alt="setup_1" width="300" height="300">
+    <img src="/assets/img/posts/realtime_food_detection/setup_2.jpg" alt="setup_2" width="300" height="300">
 </div>
 
 ## 🔗 GitHub Repository

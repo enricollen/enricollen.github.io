@@ -3,6 +3,7 @@ title: Image Background Removal [Plugin for Cheshire Cat AI - An Open Source Ita
 date: 2024-03-24 21:30 +0200
 categories: [Open Source Contributions, Image Background Removal Plugin for Cheshire Cat AI]
 tags: [LLM, Open Source]
+image: /assets/img/posts/cheshire_cat_background_remover/example.jpg
 ---
 
 ## Cheshire Cat AI 🐱
@@ -16,7 +17,7 @@ One of the most exciting features of Cheshire Cat AI is its extensibility throug
 
 As an open-source initiative 🤝, Cheshire Cat AI is based on community collaboration and contributions. Developers and enthusiasts from Italy's tech community, have joined to enhance and evolve the project, making advanced AI more accessible and adaptable.
 
-### My Contribution: Purrfectly Clear Background Plugin <img src="https://github.com/enricollen/Purrfectly_Clear_Background/raw/main/logo.png" alt="plugin_logo" width="60" height="60">
+### My Contribution: Purrfectly Clear Background Plugin <img src="/assets/img/posts/cheshire_cat_background_remover/logo.png" alt="plugin_logo" width="60" height="60">
 In my own small way, I leveraged this extensible nature to develop a plugin called "Purrfectly Clear Background" plugin. This simple tool extends the capabilities of the Cheshire Cat AI, enabling it to remove backgrounds from images, simplifying the process of preparing pictures for further use or analysis. This capability is particularly useful for users looking to avoid the hassle of spammy websites or time-consuming manual post-production.
 
 
@@ -25,4 +26,4 @@ Visit the project repository [here](https://github.com/enricollen/Purrfectly_Cle
 
 ### Screenshots 📸
 Here is a screenshot illustrating the plugin being used within the chat:
-![Screenshot 1](https://github.com/enricollen/Purrfectly_Clear_Background/raw/main/example.jpg)
+![Screenshot 1](/assets/img/posts/cheshire_cat_background_remover/example.jpg)

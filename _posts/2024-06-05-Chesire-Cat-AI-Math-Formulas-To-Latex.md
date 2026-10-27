@@ -3,6 +3,7 @@ title: Math Formulas to Latex [Plugin for Cheshire Cat AI - An Open Source Itali
 date: 2024-06-05 21:30 +0200
 categories: [Open Source Contributions, Math Formulas to Latex Plugin for Cheshire Cat AI]
 tags: [LLM, Open Source]
+image: /assets/img/posts/cheshire_cat_formulas_to_latex/example.png
 ---
 
 ## Cheshire Cat AI 🐱
@@ -16,7 +17,7 @@ One of the most exciting features of Cheshire Cat AI is its extensibility throug
 
 As an open-source initiative 🤝, Cheshire Cat AI is based on community collaboration and contributions. Developers and enthusiasts from Italy's tech community, have joined to enhance and evolve the project, making advanced AI more accessible and adaptable.
 
-### My Contribution:  <img src="https://github.com/enricollen/FormulasFurLatex/raw/main/logo.png" alt="plugin_logo" width="60" height="60">
+### My Contribution:  <img src="/assets/img/posts/cheshire_cat_formulas_to_latex/logo.png" alt="plugin_logo" width="60" height="60">
 In my own small way, I leveraged this extensible nature to develop a plugin called "Formulas Fur Latex". This simple tool extends the capabilities of the Cheshire Cat AI, enabling it to take an input image or screenshot of a math formula and produce the corresponding LaTeX code to reproduce it. 
 
 The advantage of this method is that it saves time and reduces errors, making it much easier for users to convert complex mathematical formulas into precise, high-quality LaTeX code effortlessly.
@@ -26,7 +27,7 @@ Visit the project repository [here](https://github.com/enricollen/FormulasFurLat
 
 ### Screenshots 📸
 Here is a screenshot illustrating the plugin being used within the chat:
-![Screenshot 1](https://github.com/enricollen/FormulasFurLatex/raw/main/example.png)
+![Screenshot 1](/assets/img/posts/cheshire_cat_formulas_to_latex/example.png)
 
 Check correctness:
-![Screenshot 2](https://github.com/enricollen/FormulasFurLatex/raw/main/validate_result_example.png)
+![Screenshot 2](/assets/img/posts/cheshire_cat_formulas_to_latex/validate_result_example.png)

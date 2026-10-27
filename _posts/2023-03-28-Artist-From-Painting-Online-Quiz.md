@@ -3,6 +3,7 @@ title: 🎨❓ Artist Identification from Paintings - Online Quiz Game Against a
 date: 2022-02-12 21:30 +0200
 categories: [Personal Projects, Artist Identification from Paintings - Online Quiz Game Against an AI]
 tags: [deep learning, CNN, classification, computer vision, game]
+image: /assets/img/posts/artist_quiz_game/screenshot_1.png
 ---
 As an extension of my Deep Learning academin project, I developed an engaging online quiz game where players test their knowledge of art by guessing the right artist from a given painting. The twist? You're playing against an AI model !
 
@@ -37,5 +38,5 @@ Happy guessing!
 
 ## Screenshots 📸
 Here is a screenshot illustrating the web game interface:
-![Screenshot 1](https://user-images.githubusercontent.com/55366018/219872599-1597362a-611f-4ac4-94aa-77690d8e9eb3.png)
-![Screenshot 2](https://user-images.githubusercontent.com/55366018/219872603-5b0c1fff-5f18-44a2-85be-9ee99e8fba95.png)
+![Screenshot 1](/assets/img/posts/artist_quiz_game/screenshot_1.png)
+![Screenshot 2](/assets/img/posts/artist_quiz_game/screenshot_2.png)

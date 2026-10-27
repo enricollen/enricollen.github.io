@@ -96,4 +96,4 @@ Here are some ideas for future improvements:
 
 ## 📹 Demo Video
 Watch the demo video below to see the object detection and counting system in action:
-[![YT Video](https://img.youtube.com/vi/vpVyQycCNkc/0.jpg)](https://youtu.be/vpVyQycCNkc)
+[![YT Video](/assets/img/posts/object_counting/yt_vpVyQycCNkc.jpg)](https://youtu.be/vpVyQycCNkc)
